@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import "Appearance.h"
+#import "HomeViewController.h"
+#import "CheckTableViewController.h"
+#import "SettingViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +22,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Appearance defaultAppearance];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    
+    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"home" image:NULL tag:0];
+    UINavigationController *naviHome = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    [tabbarController addChildViewController:naviHome];
+    
+    CheckTableViewController *checkTableViewController = [[CheckTableViewController alloc] init];
+    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:1];
+    UINavigationController *naviCheck = [[UINavigationController alloc] initWithRootViewController:checkTableViewController];
+    [tabbarController addChildViewController:naviCheck];
+    
+    SettingViewController *settingTableViewController = [[SettingViewController alloc] init];
+    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:2];
+    UINavigationController *naviSet = [[UINavigationController alloc] initWithRootViewController:settingTableViewController];
+    [tabbarController addChildViewController:naviSet];
+    
+    self.window.rootViewController = tabbarController;
+    
+    [self.window makeKeyAndVisible];
+    
+    //LeanCloud数据存储
+    [AVOSCloud setApplicationId:@"oCCxSuTefNMrQdsv9VVxjJuM-gzGzoHsz" clientKey:@"Q4SvggmCsLEerBauTHi2C5Xg"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    
+    
+    
     return YES;
 }
 
