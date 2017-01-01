@@ -10,18 +10,14 @@
 
 static NSString * UserClass = @"_User";
 
-typedef enum gender{
-    male = 1,
-    female
-}genderType;
+typedef enum : NSUInteger {
+    Male = 1,
+    Female = 2
+} GenderType;
 
-@interface UserObject : AVObject
+@interface UserObject : AVUser
 
-@property (nonatomic) NSString * nickname;
-@property (nonatomic) AVUser * userId;
 @property (nonatomic) NSString * iconUrl;
-@property (nonatomic) genderType * gender;
-
-+ (instancetype) User;
+@property (nonatomic) GenderType gender;
 
 @end

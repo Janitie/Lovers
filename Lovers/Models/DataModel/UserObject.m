@@ -8,26 +8,32 @@
 
 #import "UserObject.h"
 
-static NSString * const KeyName = @"nickname";
-static NSString * const KeyId = @"userId";
 static NSString * const KeyIcon = @"iconUrl";
 static NSString * const KeyGender = @"gender";
 
 @implementation UserObject
 
-+ (instancetype)User {
-    return [super objectWithClassName:UserClass];
+- (void)setIconUrl:(NSString *)iconUrl {
+    [self setObject:iconUrl forKey:KeyIcon];
+}
+
+- (NSString *)iconUrl {
+    return [self objectForKey:KeyIcon];
 }
 
 
-- (void)setName:(NSString *)nickname
-{
-    [self setObject:nickname forKey:KeyName];
+- (void)setGender:(GenderType)gender {
+    if (gender == Male) {
+        [self setObject:@(1) forKey:KeyGender];
+    } else {
+        [self setObject:@(0) forKey:KeyGender];
+    }
 }
 
-- (NSString *)nickname
+- (GenderType)gender
 {
-    return [self objectForKey:KeyName];
+    NSNumber * genderNum = [self objectForKey:KeyGender];
+    return [genderNum intValue] == 1 ? Male : Female;
 }
 
 @end
