@@ -7,11 +7,17 @@
 //
 
 #import <AVOSCloud/AVOSCloud.h>
+#import "RecordObject.h"
 
-static NSString * MemoryClass = @"Memory";
+static NSString * MemoryClassName = @"Memory";
 
 @interface Memory : AVObject
 
-@property (nonatomic) NSString * memoryId;
+@property (nonatomic, readonly) AVRelation * recordsRelation;
+
+- (void)setRecords: (NSArray<RecordObject *> *)records;
+- (void)getRecords: (void(^)(NSArray<RecordObject*> *))callback;
+
++ (instancetype) memory;
 
 @end

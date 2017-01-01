@@ -9,6 +9,7 @@
 #import "ServiceUser.h"
 #import "ServiceRecord.h"
 #import "HomeViewController.h"
+#import "Memory.h"
 
 @interface HomeViewController ()
 
@@ -45,7 +46,8 @@
                                             // 失败
                                         }
                                     }];
-}
+    
+   }
     
 
 
