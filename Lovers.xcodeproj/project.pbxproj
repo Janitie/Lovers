@@ -169,12 +169,12 @@
 		3BBA985E1E165F1F00380B7C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */,
-				3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */,
-				3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */,
 				3BBA98901E18D1D800380B7C /* HomeViewController.h */,
 				3BBA98911E18D1D800380B7C /* HomeViewController.m */,
 				3BBA98921E18D1D800380B7C /* HomeViewController.xib */,
+				3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */,
+				3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */,
+				3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */,
 				3BBA98931E18D1D800380B7C /* ResumeViewController.h */,
 				3BBA98941E18D1D800380B7C /* ResumeViewController.m */,
 				3BBA98951E18D1D800380B7C /* ResumeViewController.xib */,

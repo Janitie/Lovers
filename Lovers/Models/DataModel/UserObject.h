@@ -15,9 +15,19 @@ typedef enum : NSUInteger {
     Female = 0
 } GenderType;
 
-@interface UserObject : AVUser
+@interface UserObject : NSObject
 
+@property (nonatomic, strong, readonly) AVUser * user;
+
+@property (nonatomic) NSString * username;
+@property (nonatomic) NSString * password;
+
+@property (nonatomic) NSString * openId;
 @property (nonatomic) NSString * iconUrl;
-@property (nonatomic) GenderType gender;
+@property (nonatomic) GenderType genderType;
+
+
++ (instancetype)newUser;
++ (instancetype)currentUser;
 
 @end
