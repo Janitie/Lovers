@@ -12,7 +12,7 @@ static NSString * UserClass = @"_User";
 
 typedef enum : NSUInteger {
     Male = 1,
-    Female = 2
+    Female = 0
 } GenderType;
 
 @interface UserObject : AVUser

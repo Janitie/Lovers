@@ -49,12 +49,12 @@ static NSString * const KeyContent = @"content";
     return [self objectForKey:KeyImgUrl];
 }
 
-- (void)setCreator:(AVUser *)creator
+- (void)setCreator:(UserObject *)creator
 {
     [self setObject:creator forKey:KeyCreator];
 }
 
-- (AVUser *)creator
+- (UserObject *)creator
 {
     return [self objectForKey:KeyCreator];
 }

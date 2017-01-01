@@ -25,29 +25,7 @@
     self.title = @"home";
     
     
-    // 注册
-    [ServiceUser signUpWithUserName:@"bolo"
-                           password:@"password"
-                           callback:^(BOOL succeed) {
-                               if (succeed){
-                                   // 跳转
-                               } else {
-                                   // 提示错误
-                               }
-                           }];
-    
-    // 查询纪念册内容（列表）
-    [ServiceRecord fetchRecordListWithUserId:@"userId"
-                                    callback:^(NSArray<RecordObject *> *objects, NSError *error) {
-                                        if (!error) {
-                                            // 成功
-                                                                                        
-                                        } else {
-                                            // 失败
-                                        }
-                                    }];
-    
-   }
+}
     
 
 

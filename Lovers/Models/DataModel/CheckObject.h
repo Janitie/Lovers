@@ -7,12 +7,13 @@
 //
 
 #import <AVOSCloud/AVOSCloud.h>
+#import "UserObject.h"
 
 static NSString * CheckClass = @"Check";
 
 @interface CheckObject : AVObject
 
-@property (nonatomic) NSString * userId;
+@property (nonatomic) UserObject * user;
 @property (nonatomic) NSString * title;
 @property (nonatomic) NSDate * finishTime;
 @property (nonatomic) BOOL isComplete;

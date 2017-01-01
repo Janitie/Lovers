@@ -8,7 +8,7 @@
 
 #import "CheckObject.h"
 
-static NSString * KeyId = @"userId";
+static NSString * KeyUser = @"user";
 static NSString * KeyTitle = @"title";
 static NSString * KeyTime = @"finishTime";
 static NSString * KeyStatus = @"isComplete";
@@ -19,12 +19,12 @@ static NSString * KeyStatus = @"isComplete";
     return [self objectWithClassName:CheckClass];
 }
 
-- (void)setUserId:(NSString *)userId {
-    [self setObject:userId forKey:KeyId];
+- (void)setUser:(UserObject *)user {
+    [self setObject:user forKey:KeyUser];
 }
 
-- (NSString *)userId {
-    return [self objectForKey:KeyId];
+- (UserObject *)user {
+    return [self objectForKey:KeyUser];
 }
 
 - (void)setTitle:(NSString *)title {

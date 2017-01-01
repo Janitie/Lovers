@@ -226,18 +226,18 @@
 		3BBA988C1E18D17000380B7C /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				3BD2CF0E1E18DDBC008E9C2D /* RecordObject.h */,
-				3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */,
-				3BD2CF111E18E14B008E9C2D /* BaseDataModel.h */,
-				3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */,
 				3BD2CF171E190FC9008E9C2D /* UserObject.h */,
 				3BD2CF181E190FC9008E9C2D /* UserObject.m */,
-				3BD2CF1A1E191E14008E9C2D /* TargetObject.h */,
-				3BD2CF1B1E191E14008E9C2D /* TargetObject.m */,
-				3BD2CF1D1E19213B008E9C2D /* CheckObject.h */,
-				3BD2CF1E1E19213B008E9C2D /* CheckObject.m */,
+				3BD2CF0E1E18DDBC008E9C2D /* RecordObject.h */,
+				3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */,
 				3BD2CF201E1924FC008E9C2D /* Memory.h */,
 				3BD2CF211E1924FC008E9C2D /* Memory.m */,
+				3BD2CF1D1E19213B008E9C2D /* CheckObject.h */,
+				3BD2CF1E1E19213B008E9C2D /* CheckObject.m */,
+				3BD2CF1A1E191E14008E9C2D /* TargetObject.h */,
+				3BD2CF1B1E191E14008E9C2D /* TargetObject.m */,
+				3BD2CF111E18E14B008E9C2D /* BaseDataModel.h */,
+				3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
