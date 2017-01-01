@@ -22,15 +22,20 @@
 		3BBA98521E16311800380B7C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA98511E16311800380B7C /* CoreTelephony.framework */; };
 		3BBA98541E16312400380B7C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA98531E16312400380B7C /* CoreLocation.framework */; };
 		3BBA98581E165B9400380B7C /* LOVERS.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98571E165B9400380B7C /* LOVERS.png */; };
-		3BBA98621E1662CF00380B7C /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98611E1662CF00380B7C /* Appearance.m */; };
-		3BBA986E1E16A21700380B7C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA986C1E16A21700380B7C /* HomeViewController.m */; };
-		3BBA986F1E16A21700380B7C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA986D1E16A21700380B7C /* HomeViewController.xib */; };
-		3BBA987D1E16C11500380B7C /* ResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA987B1E16C11500380B7C /* ResumeViewController.m */; };
-		3BBA987E1E16C11500380B7C /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA987C1E16C11500380B7C /* ResumeViewController.xib */; };
-		3BBA98851E16C1BF00380B7C /* CheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98801E16C1BF00380B7C /* CheckTableViewController.m */; };
-		3BBA98861E16C1BF00380B7C /* CheckTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98811E16C1BF00380B7C /* CheckTableViewController.xib */; };
-		3BBA98871E16C1BF00380B7C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98831E16C1BF00380B7C /* SettingViewController.m */; };
-		3BBA98881E16C1BF00380B7C /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98841E16C1BF00380B7C /* SettingViewController.xib */; };
+		3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */; };
+		3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */; };
+		3BBA989B1E18D1D800380B7C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98911E18D1D800380B7C /* HomeViewController.m */; };
+		3BBA989C1E18D1D800380B7C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98921E18D1D800380B7C /* HomeViewController.xib */; };
+		3BBA989D1E18D1D800380B7C /* ResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98941E18D1D800380B7C /* ResumeViewController.m */; };
+		3BBA989E1E18D1D800380B7C /* ResumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98951E18D1D800380B7C /* ResumeViewController.xib */; };
+		3BBA989F1E18D1D800380B7C /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98971E18D1D800380B7C /* SettingViewController.m */; };
+		3BBA98A01E18D1D800380B7C /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98981E18D1D800380B7C /* SettingViewController.xib */; };
+		3BBA98A31E18D21100380B7C /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98A21E18D21100380B7C /* Appearance.m */; };
+		3BBA98A61E18D28500380B7C /* NetworkBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98A51E18D28500380B7C /* NetworkBase.m */; };
+		3BBA98A91E18D38400380B7C /* ServiceUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98A81E18D38400380B7C /* ServiceUser.m */; };
+		3BBA98B21E18DB7200380B7C /* ServiceRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98B11E18DB7200380B7C /* ServiceRecord.m */; };
+		3BD2CF101E18DDBD008E9C2D /* RecordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */; };
+		3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */; };
 		CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC920B325A5017925D78351F /* libPods-Lovers.a */; };
 /* End PBXBuildFile section */
 
@@ -55,20 +60,30 @@
 		3BBA98531E16312400380B7C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BBA98551E16313700380B7C /* libAVOSCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAVOSCloud.a; path = "Pods/../build/Debug-iphoneos/AVOSCloud/libAVOSCloud.a"; sourceTree = "<group>"; };
 		3BBA98571E165B9400380B7C /* LOVERS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOVERS.png; path = ../../../../Desktop/LOVERS.png; sourceTree = "<group>"; };
-		3BBA98601E1662CF00380B7C /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appearance.h; path = Settings/Appearance.h; sourceTree = "<group>"; };
-		3BBA98611E1662CF00380B7C /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appearance.m; path = Settings/Appearance.m; sourceTree = "<group>"; };
-		3BBA986B1E16A21700380B7C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Modules/HomeViewController.h; sourceTree = "<group>"; };
-		3BBA986C1E16A21700380B7C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Modules/HomeViewController.m; sourceTree = "<group>"; };
-		3BBA986D1E16A21700380B7C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Modules/HomeViewController.xib; sourceTree = "<group>"; };
-		3BBA987A1E16C11500380B7C /* ResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResumeViewController.h; path = Modules/ResumeViewController.h; sourceTree = "<group>"; };
-		3BBA987B1E16C11500380B7C /* ResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResumeViewController.m; path = Modules/ResumeViewController.m; sourceTree = "<group>"; };
-		3BBA987C1E16C11500380B7C /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResumeViewController.xib; path = Modules/ResumeViewController.xib; sourceTree = "<group>"; };
-		3BBA987F1E16C1BF00380B7C /* CheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckTableViewController.h; path = Modules/CheckTableViewController.h; sourceTree = "<group>"; };
-		3BBA98801E16C1BF00380B7C /* CheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckTableViewController.m; path = Modules/CheckTableViewController.m; sourceTree = "<group>"; };
-		3BBA98811E16C1BF00380B7C /* CheckTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CheckTableViewController.xib; path = Modules/CheckTableViewController.xib; sourceTree = "<group>"; };
-		3BBA98821E16C1BF00380B7C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Modules/SettingViewController.h; sourceTree = "<group>"; };
-		3BBA98831E16C1BF00380B7C /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Modules/SettingViewController.m; sourceTree = "<group>"; };
-		3BBA98841E16C1BF00380B7C /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Modules/SettingViewController.xib; sourceTree = "<group>"; };
+		3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckTableViewController.h; sourceTree = "<group>"; };
+		3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckTableViewController.m; sourceTree = "<group>"; };
+		3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckTableViewController.xib; sourceTree = "<group>"; };
+		3BBA98901E18D1D800380B7C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3BBA98911E18D1D800380B7C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3BBA98921E18D1D800380B7C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3BBA98931E18D1D800380B7C /* ResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeViewController.h; sourceTree = "<group>"; };
+		3BBA98941E18D1D800380B7C /* ResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeViewController.m; sourceTree = "<group>"; };
+		3BBA98951E18D1D800380B7C /* ResumeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumeViewController.xib; sourceTree = "<group>"; };
+		3BBA98961E18D1D800380B7C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		3BBA98971E18D1D800380B7C /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		3BBA98981E18D1D800380B7C /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		3BBA98A11E18D21100380B7C /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
+		3BBA98A21E18D21100380B7C /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appearance.m; sourceTree = "<group>"; };
+		3BBA98A41E18D28500380B7C /* NetworkBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkBase.h; sourceTree = "<group>"; };
+		3BBA98A51E18D28500380B7C /* NetworkBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkBase.m; sourceTree = "<group>"; };
+		3BBA98A71E18D38400380B7C /* ServiceUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceUser.h; sourceTree = "<group>"; };
+		3BBA98A81E18D38400380B7C /* ServiceUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceUser.m; sourceTree = "<group>"; };
+		3BBA98B01E18DB7200380B7C /* ServiceRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRecord.h; sourceTree = "<group>"; };
+		3BBA98B11E18DB7200380B7C /* ServiceRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRecord.m; sourceTree = "<group>"; };
+		3BD2CF0E1E18DDBC008E9C2D /* RecordObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordObject.h; sourceTree = "<group>"; };
+		3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordObject.m; sourceTree = "<group>"; };
+		3BD2CF111E18E14B008E9C2D /* BaseDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDataModel.h; sourceTree = "<group>"; };
+		3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDataModel.m; sourceTree = "<group>"; };
 		6ED336D48A682BBCF4B14786 /* Pods-Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lovers/Pods-Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 		CC920B325A5017925D78351F /* libPods-Lovers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lovers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +129,8 @@
 		3BA0EF4F1E15514200AF8A21 /* Lovers */ = {
 			isa = PBXGroup;
 			children = (
+				3BBA988A1E18CF2700380B7C /* Views */,
+				3BBA98891E18CF1400380B7C /* Models */,
 				3BBA985F1E16629000380B7C /* Settings */,
 				3BBA985E1E165F1F00380B7C /* Modules */,
 				3BBA98571E165B9400380B7C /* LOVERS.png */,
@@ -140,29 +157,69 @@
 		3BBA985E1E165F1F00380B7C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3BBA986B1E16A21700380B7C /* HomeViewController.h */,
-				3BBA986C1E16A21700380B7C /* HomeViewController.m */,
-				3BBA986D1E16A21700380B7C /* HomeViewController.xib */,
-				3BBA987F1E16C1BF00380B7C /* CheckTableViewController.h */,
-				3BBA98801E16C1BF00380B7C /* CheckTableViewController.m */,
-				3BBA98811E16C1BF00380B7C /* CheckTableViewController.xib */,
-				3BBA98821E16C1BF00380B7C /* SettingViewController.h */,
-				3BBA98831E16C1BF00380B7C /* SettingViewController.m */,
-				3BBA98841E16C1BF00380B7C /* SettingViewController.xib */,
-				3BBA987A1E16C11500380B7C /* ResumeViewController.h */,
-				3BBA987B1E16C11500380B7C /* ResumeViewController.m */,
-				3BBA987C1E16C11500380B7C /* ResumeViewController.xib */,
+				3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */,
+				3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */,
+				3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */,
+				3BBA98901E18D1D800380B7C /* HomeViewController.h */,
+				3BBA98911E18D1D800380B7C /* HomeViewController.m */,
+				3BBA98921E18D1D800380B7C /* HomeViewController.xib */,
+				3BBA98931E18D1D800380B7C /* ResumeViewController.h */,
+				3BBA98941E18D1D800380B7C /* ResumeViewController.m */,
+				3BBA98951E18D1D800380B7C /* ResumeViewController.xib */,
+				3BBA98961E18D1D800380B7C /* SettingViewController.h */,
+				3BBA98971E18D1D800380B7C /* SettingViewController.m */,
+				3BBA98981E18D1D800380B7C /* SettingViewController.xib */,
 			);
-			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3BBA985F1E16629000380B7C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				3BBA98601E1662CF00380B7C /* Appearance.h */,
-				3BBA98611E1662CF00380B7C /* Appearance.m */,
+				3BBA98A11E18D21100380B7C /* Appearance.h */,
+				3BBA98A21E18D21100380B7C /* Appearance.m */,
 			);
-			name = Settings;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3BBA98891E18CF1400380B7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BBA988C1E18D17000380B7C /* DataModel */,
+				3BBA988B1E18D16900380B7C /* Services */,
+				3BBA98A41E18D28500380B7C /* NetworkBase.h */,
+				3BBA98A51E18D28500380B7C /* NetworkBase.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BBA988A1E18CF2700380B7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3BBA988B1E18D16900380B7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3BBA98A71E18D38400380B7C /* ServiceUser.h */,
+				3BBA98A81E18D38400380B7C /* ServiceUser.m */,
+				3BBA98B01E18DB7200380B7C /* ServiceRecord.h */,
+				3BBA98B11E18DB7200380B7C /* ServiceRecord.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3BBA988C1E18D17000380B7C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BD2CF0E1E18DDBC008E9C2D /* RecordObject.h */,
+				3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */,
+				3BD2CF111E18E14B008E9C2D /* BaseDataModel.h */,
+				3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		99BEDA8C4C4E6B46A8F0910F /* Frameworks */ = {
@@ -252,14 +309,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBA987E1E16C11500380B7C /* ResumeViewController.xib in Resources */,
 				3BBA98581E165B9400380B7C /* LOVERS.png in Resources */,
 				3BA0EF631E15514200AF8A21 /* LaunchScreen.storyboard in Resources */,
-				3BBA986F1E16A21700380B7C /* HomeViewController.xib in Resources */,
-				3BBA98861E16C1BF00380B7C /* CheckTableViewController.xib in Resources */,
+				3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */,
+				3BBA989E1E18D1D800380B7C /* ResumeViewController.xib in Resources */,
 				3BA0EF601E15514200AF8A21 /* Assets.xcassets in Resources */,
 				3BA0EF5B1E15514200AF8A21 /* Main.storyboard in Resources */,
-				3BBA98881E16C1BF00380B7C /* SettingViewController.xib in Resources */,
+				3BBA989C1E18D1D800380B7C /* HomeViewController.xib in Resources */,
+				3BBA98A01E18D1D800380B7C /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +375,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBA98B21E18DB7200380B7C /* ServiceRecord.m in Sources */,
 				3BA0EF551E15514200AF8A21 /* AppDelegate.m in Sources */,
-				3BBA98851E16C1BF00380B7C /* CheckTableViewController.m in Sources */,
-				3BBA987D1E16C11500380B7C /* ResumeViewController.m in Sources */,
 				3BA0EF5E1E15514200AF8A21 /* Lovers.xcdatamodeld in Sources */,
 				3BA0EF521E15514200AF8A21 /* main.m in Sources */,
-				3BBA986E1E16A21700380B7C /* HomeViewController.m in Sources */,
-				3BBA98621E1662CF00380B7C /* Appearance.m in Sources */,
-				3BBA98871E16C1BF00380B7C /* SettingViewController.m in Sources */,
+				3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */,
+				3BBA989D1E18D1D800380B7C /* ResumeViewController.m in Sources */,
+				3BBA989B1E18D1D800380B7C /* HomeViewController.m in Sources */,
+				3BD2CF101E18DDBD008E9C2D /* RecordObject.m in Sources */,
+				3BBA98A91E18D38400380B7C /* ServiceUser.m in Sources */,
+				3BBA989F1E18D1D800380B7C /* SettingViewController.m in Sources */,
+				3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */,
+				3BBA98A31E18D21100380B7C /* Appearance.m in Sources */,
+				3BBA98A61E18D28500380B7C /* NetworkBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,9 +53,6 @@
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
-    
-    
-    
     return YES;
 }
 

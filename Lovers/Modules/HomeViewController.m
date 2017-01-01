@@ -6,6 +6,8 @@
 //  Copyright © 2016年 noneTobacco. All rights reserved.
 //
 
+#import "ServiceUser.h"
+#import "ServiceRecord.h"
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
@@ -20,6 +22,28 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"home";
+    
+    
+    // 注册
+    [ServiceUser signUpWithUserName:@"bolo"
+                           password:@"password"
+                           callback:^(BOOL succeed) {
+                               if (succeed){
+                                   // 跳转
+                               } else {
+                                   // 提示错误
+                               }
+                           }];
+    
+    // 查询纪念册内容（列表）
+    [ServiceRecord fetchRecordListWithUserId:@"userId"
+                                    callback:^(NSArray<RecordObject *> *objects, NSError *error) {
+                                        if (!error) {
+                                            // 成功
+                                        } else {
+                                            // 失败
+                                        }
+                                    }];
 }
     
 
