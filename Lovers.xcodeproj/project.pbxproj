@@ -37,6 +37,8 @@
 		3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */; };
 		3BD2CF191E190FC9008E9C2D /* UserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF181E190FC9008E9C2D /* UserObject.m */; };
 		AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C39D1E1925F9005FCB0E /* BaseViewController.m */; };
+		AD88C3A31E1A5847005FCB0E /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3A21E1A5846005FCB0E /* BaseTableViewController.m */; };
+		AD88C3A61E1A66B3005FCB0E /* BaseResfreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3A51E1A66B3005FCB0E /* BaseResfreshTableViewController.m */; };
 		CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC920B325A5017925D78351F /* libPods-Lovers.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,10 @@
 		AD88C39C1E1925F9005FCB0E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		AD88C39D1E1925F9005FCB0E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		AD88C3A01E193679005FCB0E /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		AD88C3A11E1A5846005FCB0E /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		AD88C3A21E1A5846005FCB0E /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		AD88C3A41E1A66B3005FCB0E /* BaseResfreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseResfreshTableViewController.h; sourceTree = "<group>"; };
+		AD88C3A51E1A66B3005FCB0E /* BaseResfreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseResfreshTableViewController.m; sourceTree = "<group>"; };
 		CC920B325A5017925D78351F /* libPods-Lovers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lovers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,6 +260,10 @@
 				AD88C39B1E19256E005FCB0E /* BaseViewProtocol.h */,
 				AD88C39C1E1925F9005FCB0E /* BaseViewController.h */,
 				AD88C39D1E1925F9005FCB0E /* BaseViewController.m */,
+				AD88C3A11E1A5846005FCB0E /* BaseTableViewController.h */,
+				AD88C3A21E1A5846005FCB0E /* BaseTableViewController.m */,
+				AD88C3A41E1A66B3005FCB0E /* BaseResfreshTableViewController.h */,
+				AD88C3A51E1A66B3005FCB0E /* BaseResfreshTableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -393,12 +403,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD88C3A61E1A66B3005FCB0E /* BaseResfreshTableViewController.m in Sources */,
 				3BBA98B21E18DB7200380B7C /* ServiceRecord.m in Sources */,
 				AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */,
 				3BA0EF551E15514200AF8A21 /* AppDelegate.m in Sources */,
 				3BA0EF5E1E15514200AF8A21 /* Lovers.xcdatamodeld in Sources */,
 				3BA0EF521E15514200AF8A21 /* main.m in Sources */,
 				3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */,
+				AD88C3A31E1A5847005FCB0E /* BaseTableViewController.m in Sources */,
 				3BBA989D1E18D1D800380B7C /* ResumeViewController.m in Sources */,
 				3BBA989B1E18D1D800380B7C /* HomeViewController.m in Sources */,
 				3BD2CF101E18DDBD008E9C2D /* RecordObject.m in Sources */,

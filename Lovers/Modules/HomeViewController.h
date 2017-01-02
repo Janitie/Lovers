@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseResfreshTableViewController.h"
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseResfreshTableViewController
 
 @end

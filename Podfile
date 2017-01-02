@@ -10,5 +10,6 @@ pod 'IQKeyboardManager', '~> 3.3.4'
 pod 'Masonry', '~> 1.0.2'
 pod 'AVOSCloudIM'             # 实时通信模块
 pod 'AVOSCloudCrashReporting' # 错误报告模块
+pod 'MJRefresh', '~> 3.1.12'
 
 end

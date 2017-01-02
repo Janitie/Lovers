@@ -7,24 +7,12 @@
 //
 
 #import "CheckTableViewController.h"
-//#import "UserObject.h"
-//#import "ServiceUser.h"
 
 @interface CheckTableViewController ()
 
 @end
 
 @implementation CheckTableViewController
-
-- (BOOL)needCustomNavigation
-{
-    return YES;
-}
-
-- (BOOL)needHideBottomBar
-{
-    return NO;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +33,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Protocol
+- (BOOL)needCustomNavigation
+{
+    return YES;
+}
+
+- (BOOL)needHideBottomBar
+{
+    return NO;
 }
 
 

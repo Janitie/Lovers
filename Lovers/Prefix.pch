@@ -11,6 +11,7 @@
 
 #define DEFAULT_THEME    [UIColor colorWithRed:0xFF/255.0 green:0xFF/255.0 blue:0xFF/255.0 alpha:1]
 #define BACKGROUND_COLOR [UIColor colorWithRed:0xCC/255.0 green:0xE6/255.0 blue:0xF6/255.0 alpha:1]
+#define DEFAULT_TINT_COLOR [UIColor colorWithRed:0xFF/255.0 green:0x77/255.0 blue:0x77/255.0 alpha:1]
 
 #import "BaseViewController.h"
 #import "Appearance.h"
@@ -22,6 +23,6 @@
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 #define navHeight    64
-#define TabBarHeight 115
+#define TabBarHeight 44
 
 #endif /* Prefix_pch */

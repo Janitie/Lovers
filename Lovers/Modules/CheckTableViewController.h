@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseResfreshTableViewController.h"
 
-@interface CheckTableViewController : BaseViewController
+@interface CheckTableViewController : BaseResfreshTableViewController
 
 @end

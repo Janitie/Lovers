@@ -30,17 +30,23 @@
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"纪念" image:NULL tag:0];
+    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"纪念"
+                                                                  image:[self imageNamed:@"ic_memory_n"]
+                                                                    tag:0];
     UINavigationController *naviHome = [[UINavigationController alloc] initWithRootViewController:homeViewController];
 //    [tabbarController addChildViewController:naviHome];
     
     CheckTableViewController *checkTableViewController = [[CheckTableViewController alloc] init];
-    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"目标" image:NULL tag:1];
+    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"目标"
+                                                                        image:[self imageNamed:@"ic_target_n"]
+                                                                          tag:1];
     UINavigationController * naviCheck = [[UINavigationController alloc] initWithRootViewController:checkTableViewController];
 //    [tabbarController addChildViewController:naviCheck];
     
     SettingViewController *settingTableViewController = [[SettingViewController alloc] init];
-    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:NULL tag:2];
+    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的"
+                                                                          image:[self imageNamed:@"ic_mine_n"]
+                                                                            tag:2];
     UINavigationController *naviSet = [[UINavigationController alloc] initWithRootViewController:settingTableViewController];
 //    [tabbarController addChildViewController:naviSet];
     
@@ -60,6 +66,9 @@
     return YES;
 }
 
+- (UIImage *)imageNamed:(NSString *)name {
+    return [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

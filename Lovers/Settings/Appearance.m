@@ -25,8 +25,9 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}
                                              forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]}
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:DEFAULT_TINT_COLOR}
                                              forState:UIControlStateSelected];
+    [[UITabBar appearance] setTintColor:DEFAULT_TINT_COLOR];
 }
 
     

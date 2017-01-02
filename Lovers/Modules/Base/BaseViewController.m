@@ -109,7 +109,7 @@
         [_customNavBar addSubview:bottomLine];
         [bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(_customNavBar);
-            make.bottom.mas_equalTo(_customNavBar.mas_bottom).offset(NAV_LINE_HEIGHT);
+            make.bottom.mas_equalTo(_customNavBar.mas_bottom).offset(-NAV_LINE_HEIGHT);
             make.height.mas_equalTo(NAV_LINE_HEIGHT);
         }];
     }
