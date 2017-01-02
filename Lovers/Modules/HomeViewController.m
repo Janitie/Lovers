@@ -22,32 +22,7 @@
     // Do any additional setup after loading the view from its nib.
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = @"home";
-//
-//    [ServiceUser signUpWithUsername:@"99999"
-//                           nickname:@"Mary"
-//                            iconUrl:@"baidu"
-//                           callback:^(BOOL isSucceeded) {
-//                               if (isSucceeded) {
-//                                   //页面跳转
-//                                   NSLog(@"good Sign");
-//                               }
-//                               else {
-//                                   //提示错误
-//                                   NSLog(@"bad Sign");
-//                               }
-//                           }];
-    
-   [ServiceUser logInWithUsername:@"99999" password:DEFAULT_PASSWORD
-                         callback:^(UserObject * cUser) {
-                             if (cUser) {
-                                 //跳转
-                                 NSLog(@"good Log");
-                             }
-                             else {
-                                 NSLog(@"Bad Log");
-                             }
-                         }];
+
     
 }
     

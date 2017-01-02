@@ -17,11 +17,16 @@
     app.statusBarHidden = NO;
     
     //设置顶栏
-    [UINavigationBar appearance].barTintColor = [UIColor greenColor];
+    [UINavigationBar appearance].backgroundColor = [UIColor whiteColor];
+    [UINavigationBar appearance].barTintColor = DEFAULT_THEME;
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor redColor]};
     [UINavigationBar appearance].translucent = YES;
     
-    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]}
+                                             forState:UIControlStateSelected];
 }
 
     

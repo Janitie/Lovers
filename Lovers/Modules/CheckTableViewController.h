@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CheckTableViewController : UIViewController
+@interface CheckTableViewController : BaseViewController
 //lallallal
 @end
