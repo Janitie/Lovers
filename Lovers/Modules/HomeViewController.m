@@ -32,33 +32,7 @@
     // Do any additional setup after loading the view from its nib.
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = @"纪念";
-//    
-    [ServiceUser signUpWithOpenId:@"99576"
-                         username:@"Jim1"
-                         password:@"jim1"
-                         callback:^(BOOL succeeded) {
-                             if (succeeded) {
-                                 NSLog(@"signup succeed");
-                             }
-                             else {
-                                 NSLog(@"nil User");
-                             }
-                         }];
-    
-//    [UserObject logInWithUsernameInBackground:@"Jim"
-//                                     password:@"jim"
-//                                        block:^(AVUser * _Nullable user, NSError * _Nullable error) {
-//                                            UserObject *userObj = (UserObject *)user;
-//                                            userObj.gender = @(1);
-//                                            [userObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//                                                if (succeeded) {
-//                                                    NSLog(@"modify gender succeed");
-//                                                }else {
-//                                                    NSLog(@"fail modify gender , error = %@", error);
-//                                                }
-//                                            }];
-//                                        }];
+
     
 }
     
