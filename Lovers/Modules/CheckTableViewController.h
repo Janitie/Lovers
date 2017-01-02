@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CheckTableViewController : BaseViewController
-//lallallal
+
 @end

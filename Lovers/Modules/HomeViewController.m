@@ -17,6 +17,16 @@
 
 @implementation HomeViewController
 
+- (BOOL)needCustomNavigation
+{
+    return YES;
+}
+
+- (BOOL)needHideBottomBar
+{
+    return NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

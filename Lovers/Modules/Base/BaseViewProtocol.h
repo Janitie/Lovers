@@ -21,4 +21,7 @@
 /// YES：收起导航栏，显示自定导航栏 NO：显示默认导航栏
 - (BOOL)needCustomNavigation;
 
+/// 是否需要隐藏tabbar
+- (BOOL)needHideBottomBar;
+
 @end

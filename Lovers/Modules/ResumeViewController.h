@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResumeViewController : UIViewController
+@interface ResumeViewController : BaseViewController
 
 @end

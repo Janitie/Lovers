@@ -9,7 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//#define DEFAULT_THEME [UIColor colorWithRed:176/255.0 green:25/255.0 blue:25/255.0 alpha:1.0];
+#define NAV_LINE_HEIGHT   (2/[UIScreen mainScreen].scale)
+#define NAV_LINE_COLOLR  [UIColor colorWithRed:0x42/255.0 green:0x93/255.0 blue:0xE2/255.0 alpha:0.4]
+
+#define LINE_COLOR	     [UIColor colorWithRed:0x42/255.0 green:0x93/255.0 blue:0xE2/255.0 alpha:0.4]
+#define LINE_COLOR_H     [UIColor colorWithRed:0x32/255.0 green:0x9A/255.0 blue:0xF0/255.0 alpha:1]
+#define LINE_COLOR_LIGHT [UIColor colorWithRed:0x32/255.0 green:0x9A/255.0 blue:0xF0/255.0 alpha:0.4]
 
 @interface Appearance : NSObject
 

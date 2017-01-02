@@ -17,6 +17,15 @@
 
 @implementation BaseViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.hidesBottomBarWhenPushed = [self needHideBottomBar];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -38,8 +47,6 @@
         // custom Navigation Bar
         [self.view addSubview:self.customNavBar];
         
-    } else {
-//        [self.navigationController setNavigationBarHidden:NO];
     }
     
     [self viewSetting];
@@ -63,6 +70,11 @@
     return  NO;
 }
 
+- (BOOL)needHideBottomBar
+{
+    return YES;
+}
+
 - (void)viewSetting
 {
 
@@ -83,12 +95,22 @@
         // image
         UIImageView *titleImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LOVERS"]];
         [_customNavBar addSubview:titleImg];
-        
         [titleImg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(_customNavBar.mas_top).offset(20);
-            make.bottom.mas_equalTo(_customNavBar.mas_bottom);
+            
+            make.centerY.mas_equalTo(_customNavBar.mas_centerY).offset(10);
             make.centerX.mas_equalTo(_customNavBar.mas_centerX);
-            make.width.mas_equalTo(287);
+            make.width.mas_equalTo(163);
+            make.height.mas_equalTo(25);
+        }];
+        
+        // bottom Line
+        UIView * bottomLine = [UIView new];
+        bottomLine.backgroundColor = [UIColor lightGrayColor];
+        [_customNavBar addSubview:bottomLine];
+        [bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(_customNavBar);
+            make.bottom.mas_equalTo(_customNavBar.mas_bottom).offset(NAV_LINE_HEIGHT);
+            make.height.mas_equalTo(NAV_LINE_HEIGHT);
         }];
     }
     return _customNavBar;

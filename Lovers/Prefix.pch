@@ -13,6 +13,7 @@
 #define BACKGROUND_COLOR [UIColor colorWithRed:0xCC/255.0 green:0xE6/255.0 blue:0xF6/255.0 alpha:1]
 
 #import "BaseViewController.h"
+#import "Appearance.h"
 #import <Masonry/Masonry.h>
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
