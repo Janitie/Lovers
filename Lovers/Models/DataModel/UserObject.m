@@ -10,7 +10,8 @@
 
 static NSString * const KeyIcon = @"iconUrl";
 static NSString * const KeyGender = @"gender";
-static NSString * const KeyId = @"openId";
+//static NSString * const KeyId = @"openId";
+static NSString * const KeyName = @"nickname";
 
 @interface UserObject ()
 
@@ -83,12 +84,12 @@ static NSString * const KeyId = @"openId";
 
 //weixin Login
 
-- (void)setOpenId:(NSString *)openId {
-    [self.user setObject:openId forKey:KeyId];
+- (void)setNickname:(NSString *)nickname {
+    [self.user setObject:nickname forKey:KeyName];
 }
 
-- (NSString *)openId {
-    return [self.user objectForKey:KeyId];
+- (NSString *)nickname {
+    return [self.user objectForKey:KeyName];
 }
 
 @end

@@ -22,10 +22,10 @@ typedef enum : NSUInteger {
 @property (nonatomic) NSString * username;
 @property (nonatomic) NSString * password;
 
-@property (nonatomic) NSString * openId;
+//@property (nonatomic) NSString * openId:;
 @property (nonatomic) NSString * iconUrl;
 @property (nonatomic) GenderType genderType;
-
+@property (nonatomic) NSString * nickname;
 
 + (instancetype)newUser;
 + (instancetype)currentUser;

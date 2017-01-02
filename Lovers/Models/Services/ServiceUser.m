@@ -7,18 +7,18 @@
 //
 
 #import "ServiceUser.h"
-#import "UserObject.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 @implementation ServiceUser
 
-//SignUp
-+ (void)signUpWithOpenId:(NSString *)openid username:(NSString *)username password:(NSString *)password callback:(void (^)(BOOL))callback {
-    if (openid && username && password) {
+
++ (void)signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void (^)(BOOL))callback
+{
+    if (username && nickname && iconUrl) {
         UserObject * newUser = [UserObject newUser];
-        newUser.openId = openid;
         newUser.username = username;
-        newUser.password = password;
+        newUser.password = DEFAULT_PASSWORD;
+        newUser.iconUrl = iconUrl;
         newUser.genderType = Male;
         
         [newUser.user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
@@ -31,44 +31,22 @@
     }
 }
 
-
-
-//+ (void)signUpWithMobilephoneNumber:(NSString *)number password:(NSString *)password callback:(void (^)(BOOL))block
-//{
-//    if (number && password) {
-//        AVUser * user = [AVUser user];
-//        user.mobilePhoneNumber = number;
-//        user.password = password;
-//        
-//        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//            if (!error)
-//            {
-//                if (block) {
-//                    block(succeeded);
-//                }
-//            }
-//        }];
-//    }
-//}
-//
-//+ (void)logInWithMobilephoneNumber:(NSString *)number password:(NSString *)password callback:(void (^)(BOOL))block {
-//    if (number && password) {
-//        AVQuery * query = [AVQuery queryWithClassName:UserClass];
-//        [query getObjectInBackgroundWithId:number block:^(AVObject * _Nullable object, NSError * _Nullable error) {
-//            if (!error) {
-//                UserObject * user = (UserObject *)object;
-//                if ([user.password isEqualToString:password]) {
-//                    block(object);
-//                }
-//                else {
-//                    
-//                }
-//            }
-//            else {
-//                NSLog(@"wrong 1");
-//            }
-//        }];
-//    }
-//}
++ (void)logInWithUsername:(NSString *)username
+                 password:(NSString *)password
+                 callback:(void (^)(UserObject *))callback {
+    if (username && password) {
+        [AVUser logInWithUsernameInBackground:username
+                                     password:password
+                                        block:^(AVUser * _Nullable user, NSError * _Nullable error) {
+                                            if (user) {
+                                                UserObject * logUser = [UserObject currentUser];
+                                                callback(logUser);
+                                            }
+                                            else {
+                                                callback(nil);
+                                            }
+                                        }];
+    }
+}
 
 @end

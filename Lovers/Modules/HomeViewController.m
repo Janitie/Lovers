@@ -23,32 +23,31 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"home";
-//    
-    [ServiceUser signUpWithOpenId:@"99576"
-                         username:@"Jim1"
-                         password:@"jim1"
-                         callback:^(BOOL succeeded) {
-                             if (succeeded) {
-                                 NSLog(@"signup succeed");
+//
+//    [ServiceUser signUpWithUsername:@"99999"
+//                           nickname:@"Mary"
+//                            iconUrl:@"baidu"
+//                           callback:^(BOOL isSucceeded) {
+//                               if (isSucceeded) {
+//                                   //页面跳转
+//                                   NSLog(@"good Sign");
+//                               }
+//                               else {
+//                                   //提示错误
+//                                   NSLog(@"bad Sign");
+//                               }
+//                           }];
+    
+   [ServiceUser logInWithUsername:@"99999" password:DEFAULT_PASSWORD
+                         callback:^(UserObject * cUser) {
+                             if (cUser) {
+                                 //跳转
+                                 NSLog(@"good Log");
                              }
                              else {
-                                 NSLog(@"nil User");
+                                 NSLog(@"Bad Log");
                              }
                          }];
-    
-//    [UserObject logInWithUsernameInBackground:@"Jim"
-//                                     password:@"jim"
-//                                        block:^(AVUser * _Nullable user, NSError * _Nullable error) {
-//                                            UserObject *userObj = (UserObject *)user;
-//                                            userObj.gender = @(1);
-//                                            [userObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//                                                if (succeeded) {
-//                                                    NSLog(@"modify gender succeed");
-//                                                }else {
-//                                                    NSLog(@"fail modify gender , error = %@", error);
-//                                                }
-//                                            }];
-//                                        }];
     
 }
     

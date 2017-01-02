@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserObject.h"
+
+#define DEFAULT_PASSWORD @"12345"
 
 @interface ServiceUser : NSObject
 
-//// 用户注册
-//+ (void) signUpWithMobilephoneNumber:(NSString *)number password:(NSString *)password callback:(void(^)(BOOL))block;
-//// Log in
-//+ (void) logInWithMobilephoneNumber:(NSString *)number password:(NSString *)password callback:(void(^)(BOOL))block;
-
 //signUp
-+ (void) signUpWithOpenId:(NSString *)openid username:(NSString *)username password:(NSString *)password callback:(void(^)(BOOL))callback;
++ (void) signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void(^)(BOOL))callback;
 
+//logIn
++ (void) logInWithUsername:(NSString *)username password:(NSString *)password callback:(void(^)(UserObject *))callback;
 
+//match
++ (void)match;
 
 @end
