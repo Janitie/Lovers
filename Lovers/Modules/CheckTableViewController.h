@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseResfreshTableViewController.h"
 
-<<<<<<< HEAD
 @interface CheckTableViewController : BaseResfreshTableViewController
 
-=======
-@interface CheckTableViewController : BaseViewController
-//lallallal
->>>>>>> origin/master
 @end
