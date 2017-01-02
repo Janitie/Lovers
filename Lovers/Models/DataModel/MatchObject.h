@@ -14,6 +14,6 @@ static NSString * MatchClassName = @"Match";
 
 @property (nonatomic) AVObject * userOne;
 @property (nonatomic) AVObject * userTwo;
-
+@property (nonatomic) AVObject * memory;
 
 @end

@@ -15,6 +15,8 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic, strong) CheckObject * tempCheck;
+
 @end
 
 @implementation HomeViewController
@@ -30,36 +32,45 @@
 
     [ServiceUser logInWithUsername:@"user3"
                           password:DEFAULT_PASSWORD
-                          callback:^(UserObject * cUser,NSString * mCode) {
-                              if (cUser) {
-                                  NSLog(@"good log");
-                                  NSLog(@"%@",mCode);
-                                  
-//                                  [ServiceUser isMatchedWithCallback:^(BOOL answer) {
-//                                      if (answer) {
-//                                          NSLog(@"taken");
-//                                      }
-//                                  }];
-//                                  [ServiceCheck creatNewWithTitle:@"fuck"
-//                                                       finishTime:[NSDate date]
-//                                                         callback:^(BOOL succeeded) {
-//                                                             if (succeeded) {
-//                                                                 NSLog(@"new check");
-//                                                             }
-//                                                         }];
-//                                  [ServiceCheck deleteWithTitle:@"fuck"
-//                                                       callback:^(BOOL succeeded) {
-//                                                           if (succeeded) {
-//                                                               NSLog(@"no fuck");
-//                                                           }
-//                                                       }];
-                              }
-                              else {
-                                  NSLog(@"bad log");
-                              }
+                          callback:^(UserObject * user, NSString * mCode) {
+                              
+                              [ServiceUser isMatchedWithCallback:^(BOOL isSucceed, Memory * memoryObject) {
+                                  if (isSucceed) {
+                                      NSLog(@"get Memory succeed : %@", memoryObject.avObject.objectId);
+                                      
+                                      [ServiceRecord creatRecordWithTitle:@"catch"
+                                                                  content:@"takes a lot to find cat"
+                                                                   imgUrl:@"baidu"
+                                                                 callback:^(BOOL succeeded) {
+                                                                     if (succeeded) {
+                                                                         NSLog(@"new record");
+                                                                     }
+                                                                 }];
+                                  }
+                              }];
+
+                              
+                              
+                              
+//                              [ServiceUser matchUserWithCode:@"660ee"
+//                                                    callback:^(BOOL succeed, NSError *error) {
+//                                                        if (succeed) {
+//                                                            NSLog(@"matched");
+//                                                        }
+//                                                    }];
+//                              
                           }];
     
-   
+//    [ServiceCheck findCheckWithStatus:YES
+//                             callback:^(NSArray<AVObject *> *checkList, NSError *error) {
+//                                 if (checkList) {
+//                                     for (AVObject * check in checkList) {
+//                                         CheckObject * checkie = [CheckObject objectWithObject:check];
+//                                         NSLog(@"%@",checkie.title);
+//                                     }
+//                                 }
+//                             }];
+    
     
 }
     

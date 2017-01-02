@@ -10,6 +10,7 @@
 
 @implementation ServiceCheck
 
+#pragma mark - creat
 + (void)creatNewWithTitle:(NSString *)title finishTime:(NSDate *)fTime callback:(void (^)(BOOL))callback{
     CheckObject * newCheck = [CheckObject newObject];
     newCheck.title = title;
@@ -27,6 +28,8 @@
     }];
 }
 
+
+#pragma mark - query
 + (void)findInCheckBoxWithTitle:(NSString *)title Callback:(void (^)(BOOL succeeded,CheckObject * checkie))callback {
     AVQuery * query = [AVQuery queryWithClassName:CheckClass];
     [query whereKey:@"title" equalTo:title];
@@ -39,9 +42,29 @@
             callback(NO,nil);
         }
     }];
+}
+
++ (void)findCheckWithStatus:(BOOL)status callback:(void (^)(NSArray<AVObject *> *, NSError *))callback {
+    AVQuery * query = [AVQuery queryWithClassName:CheckClass];
+    [query whereKey:@"isComplete" equalTo:@(status)];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            callback(objects,nil);
+        }
+    }];
     
 }
 
++ (void)findAllCheckCallback:(void (^)(NSArray<AVObject *> * checkList, NSError * error))callback {
+    AVQuery * query = [AVQuery queryWithClassName:CheckClass];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            callback(objects,nil);
+        }
+    }];
+}
+
+#pragma mark - delete
 + (void)deleteWithTitle:(NSString *)title callback:(void (^)(BOOL))callback {
     [self findInCheckBoxWithTitle:title
                          Callback:^(BOOL succeeded, CheckObject *checkie) {
@@ -51,5 +74,79 @@
                              }
                          }];
 }
+
+
+#pragma mark - change
++ (void)changeTitleTo:(NSString *)newTitle withObject:(CheckObject *)check callback:(void (^)(BOOL))callback {
+    [self findInCheckBoxWithTitle:check.title
+                         Callback:^(BOOL succeeded, CheckObject *checkie) {
+                             if (succeeded) {
+                                 checkie.title = newTitle;
+                                 [checkie.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                     if (succeeded) {
+                                         callback(YES);
+                                     }
+                                     else {
+                                         callback(error);
+                                     }
+                                 }];
+                             }
+                         }];
+}
+
++ (void)changeFinishTimeTo:(NSDate *)newDate withObject:(CheckObject *)check callback:(void (^)(BOOL))callback {
+    [self findInCheckBoxWithTitle:check.title
+                         Callback:^(BOOL succeeded, CheckObject *checkie) {
+                             if (succeeded) {
+                                 checkie.finishTime = newDate;
+                                 [checkie.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                     if (succeeded) {
+                                         callback(YES);
+                                     }
+                                     else {
+                                         callback(error);
+                                     }
+                                 }];
+                             }
+                         }];
+
+}
+
++ (void)changeStatusWithObject:(CheckObject *)check Callback:(void (^)(BOOL))callback {
+    [self findInCheckBoxWithTitle:check.title
+                         Callback:^(BOOL succeeded, CheckObject *checkie) {
+                             if (succeeded) {
+                                 checkie.isComplete = YES;
+                                 [checkie.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                     if (succeeded) {
+                                         callback(YES);
+                                     }
+                                     else {
+                                         callback(error);
+                                     }
+                                 }];
+                             }
+                         }];
+}
+
+
+#pragma mark - target
++ (void)showTargetCallback:(void (^)(NSArray<TargetObject *> * targetList, NSError * error))callback {
+    AVQuery * query = [AVQuery queryWithClassName:TargetClass];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (objects && objects.count >0) {
+            NSMutableArray * tArray = [NSMutableArray array];
+            for (AVObject * targetie in objects) {
+                TargetObject *tObject = [TargetObject objectWithObject:targetie];
+                [tArray addObject:tObject];
+            }
+            callback(tArray,nil);
+        }
+        else {
+            callback(nil,error);
+        }
+    }];
+}
+
 
 @end

@@ -76,18 +76,25 @@
             UserObject *user = [UserObject userWithUser:objects[0]];
             UserObject * me = [UserObject currentUser];
             
-            MatchObject *match = [MatchObject newObject];
-            match.userOne = user.user;
-            match.userTwo = me.user;
-            
-            [match.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                [AVObject saveAllInBackground:@[user.user, me.user]
-                                        block:^(BOOL succeeded, NSError * _Nullable error) {
-                                            if (callback) {
-                                                callback(succeeded, error);
-                                            }
-                                        }];
+            Memory * memo = [Memory newObject];
+            [memo.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if (succeeded) {
+                    MatchObject *match = [MatchObject newObject];
+                    match.userOne = user.user;
+                    match.userTwo = me.user;
+                    match.memory = memo.avObject;
+                    
+                    [match.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                        if (callback) {
+                            callback(succeeded, error);
+                        }
+                    }];
+                } else {
+                    callback(NO, nil);
+                }
             }];
+            
+            
         } else {
             callback(NO, nil);
             NSLog(@"no object");
@@ -96,7 +103,7 @@
 }
 
 
-+ (void)isMatchedWithCallback:(void (^)(BOOL))callback {
++ (void)isMatchedWithCallback:(void (^)(BOOL,Memory *))callback {
     UserObject * cUser = [UserObject currentUser];
     AVQuery * queryFirst = [AVQuery queryWithClassName:MatchClassName];
     [queryFirst whereKey:@"userOne" equalTo:cUser.user];
@@ -109,16 +116,22 @@
         if (objects && objects.count > 0) {
             MatchObject * match = [MatchObject objectWithObject:objects[0]];
             if (match) {
-                callback (YES);
+                AVQuery * query = [AVQuery queryWithClassName:MemoryClassName];
+                [query getObjectInBackgroundWithId:match.memory.objectId
+                                             block:^(AVObject * _Nullable object, NSError * _Nullable error) {
+                                                 if (object) {
+                                                     Memory *memoryObject = [Memory objectWithObject:object];
+                                                     [[LocalDataObject Instance] setCurrentMemory:memoryObject];
+                                                     callback(YES, memoryObject);
+                                                 } else {
+                                                     callback(NO, nil);
+                                                 }
+                                             }];
             } else {
-                callback (NO);
+                callback(NO,nil);
             }
-        } else {
-            callback(NO);
         }
-
     }];
-    
 }
 
 
