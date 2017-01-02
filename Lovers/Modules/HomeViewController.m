@@ -27,61 +27,30 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    [ServiceUser logInWithUsername:@"user3"
-                          password:DEFAULT_PASSWORD
-                          callback:^(UserObject * cUser,NSString * mCode) {
-                              if (cUser) {
-                                  NSLog(@"good log");
-                                  NSLog(@"%@",mCode);
-                                  
-//                                  [ServiceUser isMatchedWithCallback:^(BOOL answer) {
-//                                      if (answer) {
-//                                          NSLog(@"taken");
-//                                      }
-//                                  }];
-//                                  [ServiceCheck creatNewWithTitle:@"fuck"
-//                                                       finishTime:[NSDate date]
-//                                                         callback:^(BOOL succeeded) {
-//                                                             if (succeeded) {
-//                                                                 NSLog(@"new check");
-//                                                             }
-//                                                         }];
-//                                  [ServiceCheck deleteWithTitle:@"fuck"
-//                                                       callback:^(BOOL succeeded) {
-//                                                           if (succeeded) {
-//                                                               NSLog(@"no fuck");
-//                                                           }
-//                                                       }];
-//                                
-//                                  WS(weakSelf);
-//                                  [ServiceCheck findInCheckBoxWithTitle:@"dance"
-//                                                               Callback:^(BOOL succeeded, CheckObject *checkie) {
-//                                                                   if (succeeded) {
-//                                                                       weakSelf.tempCheck = checkie;
-//                                                                       
-////                                                                       [ServiceCheck changeTitleTo:@"dance"
-////                                                                                        withObject:checkie
-////                                                                                          callback:^(BOOL succeeded) {
-////                                                                                              if (succeeded) {
-////                                                                                                  NSLog(@"lets dance");
-////                                                                                              }
-////                                                                                          }];
-////                                                                       [ServiceCheck changeFinishTimeTo:[NSDate date]
-////                                                                                             withObject:checkie
-////                                                                                               callback:^(BOOL succeeded) {
-////                                                                                                   if (succeeded) {
-////                                                                                                       NSLog(@"new date");
-////                                                                                                   }
-////                                                                                               }];
-//                                                                       
-//                                                                   }
-//                                                               }];
-                              }
-                              else {
-                                  NSLog(@"bad log");
-                              }
-                          }];
+   
+                                
+//    WS(weakSelf);
+    [ServiceCheck findCheckWithStatus:NO callback:^(NSArray<CheckObject *> *checkList, NSError *error) {
+        if (checkList && checkList.count > 0) {
+            for (CheckObject * cObject in checkList) {
+                NSLog(@"%@",cObject.title);
+            }
+        }
+        else {
+            NSLog(@"not some");
+        }
+    }];
     
+//    [ServiceCheck findAllCheckCallback:^(NSArray<CheckObject *> *checkList, NSError *error) {
+//        if (checkList && checkList.count > 0) {
+//            for (CheckObject * cObject in checkList) {
+//                NSLog(@"%@",cObject.title);
+//            }
+//        }
+//        else {
+//            NSLog(@"not any");
+//        }
+//    }];
 }
     
 

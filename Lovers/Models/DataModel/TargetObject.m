@@ -20,4 +20,9 @@ static NSString * KeyTitle = @"title";
     [self.avObject setObject:title forKey:KeyTitle];
 }
 
+- (NSString *)title
+{
+    return [self.avObject objectForKey:KeyTitle];
+}
+
 @end
