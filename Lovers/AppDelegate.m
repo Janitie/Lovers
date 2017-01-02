@@ -7,11 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "Appearance.h"
-#import "HomeViewController.h"
-#import "CheckTableViewController.h"
-#import "SettingViewController.h"
+#import "MainViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,39 +22,9 @@
     // Override point for customization after application launch.
     [Appearance defaultAppearance];
     
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    
-    HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"纪念"
-                                                                  image:[self imageNamed:@"ic_memory_n"]
-                                                                    tag:0];
-    UINavigationController *naviHome = [[UINavigationController alloc] initWithRootViewController:homeViewController];
-//    [tabbarController addChildViewController:naviHome];
-    
-    CheckTableViewController *checkTableViewController = [[CheckTableViewController alloc] init];
-    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"目标"
-                                                                        image:[self imageNamed:@"ic_target_n"]
-                                                                          tag:1];
-    UINavigationController * naviCheck = [[UINavigationController alloc] initWithRootViewController:checkTableViewController];
-//    [tabbarController addChildViewController:naviCheck];
-    
-    SettingViewController *settingTableViewController = [[SettingViewController alloc] init];
-    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的"
-                                                                          image:[self imageNamed:@"ic_mine_n"]
-                                                                            tag:2];
-    UINavigationController *naviSet = [[UINavigationController alloc] initWithRootViewController:settingTableViewController];
-//    [tabbarController addChildViewController:naviSet];
-    
-    tabbarController.viewControllers = @[naviHome,
-                                         naviCheck,
-                                         naviSet];
-    
-    self.window.rootViewController = tabbarController;
-    
-    [self.window makeKeyAndVisible];
+    [self changeToLoginView];
     
     //LeanCloud数据存储
     [AVOSCloud setApplicationId:@"oCCxSuTefNMrQdsv9VVxjJuM-gzGzoHsz" clientKey:@"Q4SvggmCsLEerBauTHi2C5Xg"];
@@ -66,8 +34,14 @@
     return YES;
 }
 
-- (UIImage *)imageNamed:(NSString *)name {
-    return [[UIImage imageNamed:name] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+- (void)changeToLoginView {
+    [self.window setRootViewController:[LoginViewController LoginViewWithNavigation]];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)changeToMainView {
+    [self.window setRootViewController:[MainViewController new]];
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

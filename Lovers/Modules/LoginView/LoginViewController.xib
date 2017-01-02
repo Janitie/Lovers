@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOVERS" translatesAutoresizingMaskIntoConstraints="NO" id="j9z-fX-B1c">
+                    <rect key="frame" x="0.0" y="90" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="YWu-Ya-KV0"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG6-0n-DGK">
+                    <rect key="frame" x="107" y="300" width="160" height="60"/>
+                    <color key="backgroundColor" red="0.53515732288360596" green="0.86598223447799683" blue="0.29481440782546997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="Dcs-s6-tg8"/>
+                        <constraint firstAttribute="height" constant="60" id="bKo-ee-0hi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="微信登陆"/>
+                    <connections>
+                        <action selector="weChatLogin:" destination="-1" eventType="touchUpInside" id="jWq-yh-VXI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vG6-0n-DGK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Tl-Hm-XJt"/>
+                <constraint firstItem="vG6-0n-DGK" firstAttribute="top" secondItem="j9z-fX-B1c" secondAttribute="bottom" constant="10" id="Rgb-UI-PyS"/>
+                <constraint firstItem="j9z-fX-B1c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="RjO-ao-nDb"/>
+                <constraint firstAttribute="trailing" secondItem="j9z-fX-B1c" secondAttribute="trailing" id="Rr3-jG-A3W"/>
+                <constraint firstItem="j9z-fX-B1c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tC6-AK-zua"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="101.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LOVERS" width="307" height="47"/>
+    </resources>
+</document>

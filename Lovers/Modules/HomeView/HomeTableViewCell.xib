@@ -1,19 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="KGk-i7-Jjw" customClass="HomeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_memory_h" translatesAutoresizingMaskIntoConstraints="NO" id="8cZ-az-GfG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wDL-Yw-PZ4">
+                        <rect key="frame" x="0.0" y="117" width="160" height="32"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35431338028169013" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="a0a-3g-6yt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AchieveTime" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fux-dj-yNS">
+                        <rect key="frame" x="160" y="117" width="160" height="32"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35431338029999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="EQX-DP-Fw6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wDL-Yw-PZ4" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="0je-V0-OuE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8cZ-az-GfG" secondAttribute="bottom" constant="-9" id="6cm-CM-JFX"/>
+                    <constraint firstItem="wDL-Yw-PZ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="6vn-fD-vVz"/>
+                    <constraint firstItem="fux-dj-yNS" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="HKn-Mo-yxk"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fux-dj-yNS" secondAttribute="bottom" constant="-8" id="LJ5-nh-iKe"/>
+                    <constraint firstItem="8cZ-az-GfG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Wav-Q5-JjC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wDL-Yw-PZ4" secondAttribute="bottom" constant="-8" id="mOw-mC-u0a"/>
+                    <constraint firstItem="8cZ-az-GfG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="sCH-ST-H9d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fux-dj-yNS" secondAttribute="trailing" constant="-8" id="xxE-MK-elE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8cZ-az-GfG" secondAttribute="trailing" constant="-8" id="ztQ-cb-MuK"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="achieveTime" destination="fux-dj-yNS" id="J0l-a0-fdc"/>
+                <outlet property="posterImg" destination="8cZ-az-GfG" id="81r-E3-rEY"/>
+                <outlet property="recordTitle" destination="wDL-Yw-PZ4" id="ySK-Sy-QuK"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="-6"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_memory_h" width="25" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

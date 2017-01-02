@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface AddTargetViewController : UIViewController
+@interface AddTargetViewController : BaseViewController
+
+@property (weak, nonatomic) IBOutlet UIView *targetCard;
+@property (weak, nonatomic) IBOutlet UIView *targetTitleLabel;
 
 @end

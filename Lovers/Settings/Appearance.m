@@ -13,15 +13,18 @@
 + (void)defaultAppearance {
     UIApplication *app = [UIApplication sharedApplication];
     
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    [[IQKeyboardManager sharedManager] setEnableAutoToolbar:YES];
+    
     app.statusBarStyle = UIStatusBarStyleDefault;
     app.statusBarHidden = NO;
     
     //设置顶栏
     [UINavigationBar appearance].backgroundColor = [UIColor whiteColor];
     [UINavigationBar appearance].barTintColor = DEFAULT_THEME;
-    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].tintColor = DEFAULT_TINT_COLOR;
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor redColor]};
-    [UINavigationBar appearance].translucent = YES;
+    [UINavigationBar appearance].translucent = NO;
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}
                                              forState:UIControlStateNormal];

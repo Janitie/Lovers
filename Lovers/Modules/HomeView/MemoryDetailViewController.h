@@ -10,4 +10,5 @@
 
 @interface MemoryDetailViewController : BaseViewController
 
+
 @end

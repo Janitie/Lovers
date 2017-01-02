@@ -20,6 +20,8 @@
 
 - (void)saveContext;
 
+- (void)changeToLoginView;
+- (void)changeToMainView;
 
 @end
 

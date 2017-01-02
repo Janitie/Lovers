@@ -7,6 +7,7 @@
 //
 
 #import "AddTargetViewController.h"
+#import "AddCustomTargetViewController.h"
 
 @interface AddTargetViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"添加计划";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +26,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)refuseButtonDo:(id)sender {
 }
-*/
+
+- (IBAction)acceptButtonDo:(id)sender {
+}
+
+- (IBAction)customTargetButtonDo:(id)sender {
+    AddCustomTargetViewController *addCusTargetVC = [AddCustomTargetViewController new];
+    [self.navigationController pushViewController:addCusTargetVC animated:YES];
+}
+
+
+
 
 @end

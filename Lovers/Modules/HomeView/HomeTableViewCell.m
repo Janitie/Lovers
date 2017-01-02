@@ -10,6 +10,21 @@
 
 @implementation HomeTableViewCell
 
++ (UINib *) cellNib {
+    return [UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil];
+}
+
++ (NSString *)CellReuseIdentifier
+{
+    return NSStringFromClass([self class]);
+}
+
++ (CGFloat)cellHeight
+{
+    return 125.0f;
+}
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

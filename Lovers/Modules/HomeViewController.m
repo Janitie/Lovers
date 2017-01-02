@@ -11,6 +11,7 @@
 #import "ServiceCheck.h"
 #import "HomeViewController.h"
 #import "Memory.h"
+#import "HomeTableViewCell.h"
 
 @interface HomeViewController ()
 
@@ -22,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"纪念";
+    
+    [self.tableView registerNib:[HomeTableViewCell cellNib] forCellReuseIdentifier:[HomeTableViewCell CellReuseIdentifier]];
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 
@@ -81,6 +84,18 @@
 - (BOOL)needsRefreshFooter
 {
     return YES;
+}
+
+#pragma mark - TableView Delegate & DataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:[HomeTableViewCell CellReuseIdentifier] forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [HomeTableViewCell cellHeight];
 }
 
 @end

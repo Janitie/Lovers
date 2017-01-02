@@ -57,6 +57,16 @@
 		AD88C3DC1E1A9438005FCB0E /* AddTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3DB1E1A9438005FCB0E /* AddTargetViewController.m */; };
 		AD88C3E31E1A947D005FCB0E /* AddCustomTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3E11E1A947D005FCB0E /* AddCustomTargetViewController.m */; };
 		AD88C3E41E1A947D005FCB0E /* AddCustomTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C3E21E1A947D005FCB0E /* AddCustomTargetViewController.xib */; };
+		AD88C3EC1E1ACBC2005FCB0E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3EA1E1ACBC2005FCB0E /* LoginViewController.m */; };
+		AD88C3ED1E1ACBC2005FCB0E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C3EB1E1ACBC2005FCB0E /* LoginViewController.xib */; };
+		AD88C3F11E1ACBD3005FCB0E /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3EF1E1ACBD3005FCB0E /* MatchViewController.m */; };
+		AD88C3F21E1ACBD3005FCB0E /* MatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C3F01E1ACBD3005FCB0E /* MatchViewController.xib */; };
+		AD88C3F51E1AD125005FCB0E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3F41E1AD125005FCB0E /* MainViewController.m */; };
+		AD88C3F71E1AD843005FCB0E /* AddTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C3F61E1AD843005FCB0E /* AddTargetViewController.xib */; };
+		AD88C3FC1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3FB1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.m */; };
+		AD88C4001E1ADF90005FCB0E /* UILabel+StringFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3FF1E1ADF90005FCB0E /* UILabel+StringFrame.m */; };
+		AD88C4041E1AEC5D005FCB0E /* EditRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C4021E1AEC5D005FCB0E /* EditRecordViewController.m */; };
+		AD88C4051E1AEC5D005FCB0E /* EditRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C4031E1AEC5D005FCB0E /* EditRecordViewController.xib */; };
 		CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC920B325A5017925D78351F /* libPods-Lovers.a */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +156,22 @@
 		AD88C3E01E1A947D005FCB0E /* AddCustomTargetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCustomTargetViewController.h; sourceTree = "<group>"; };
 		AD88C3E11E1A947D005FCB0E /* AddCustomTargetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCustomTargetViewController.m; sourceTree = "<group>"; };
 		AD88C3E21E1A947D005FCB0E /* AddCustomTargetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCustomTargetViewController.xib; sourceTree = "<group>"; };
+		AD88C3E91E1ACBC2005FCB0E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		AD88C3EA1E1ACBC2005FCB0E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		AD88C3EB1E1ACBC2005FCB0E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		AD88C3EE1E1ACBD3005FCB0E /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
+		AD88C3EF1E1ACBD3005FCB0E /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
+		AD88C3F01E1ACBD3005FCB0E /* MatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchViewController.xib; sourceTree = "<group>"; };
+		AD88C3F31E1AD125005FCB0E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AD88C3F41E1AD125005FCB0E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AD88C3F61E1AD843005FCB0E /* AddTargetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTargetViewController.xib; sourceTree = "<group>"; };
+		AD88C3FA1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ShowQuickTips.h"; sourceTree = "<group>"; };
+		AD88C3FB1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ShowQuickTips.m"; sourceTree = "<group>"; };
+		AD88C3FE1E1ADF90005FCB0E /* UILabel+StringFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StringFrame.h"; sourceTree = "<group>"; };
+		AD88C3FF1E1ADF90005FCB0E /* UILabel+StringFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+StringFrame.m"; sourceTree = "<group>"; };
+		AD88C4011E1AEC5D005FCB0E /* EditRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRecordViewController.h; sourceTree = "<group>"; };
+		AD88C4021E1AEC5D005FCB0E /* EditRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRecordViewController.m; sourceTree = "<group>"; };
+		AD88C4031E1AEC5D005FCB0E /* EditRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRecordViewController.xib; sourceTree = "<group>"; };
 		CC920B325A5017925D78351F /* libPods-Lovers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lovers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +216,7 @@
 		3BA0EF4F1E15514200AF8A21 /* Lovers */ = {
 			isa = PBXGroup;
 			children = (
+				AD88C3F81E1ADF5F005FCB0E /* External */,
 				3BBA988A1E18CF2700380B7C /* Views */,
 				3BBA98891E18CF1400380B7C /* Models */,
 				3BBA985F1E16629000380B7C /* Settings */,
@@ -218,6 +245,7 @@
 		3BBA985E1E165F1F00380B7C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD88C3E51E1ACB77005FCB0E /* LoginView */,
 				AD88C3B51E1A8DD8005FCB0E /* MineView */,
 				AD88C3B41E1A8DC8005FCB0E /* CheckView */,
 				AD88C3B31E1A8DBC005FCB0E /* HomeView */,
@@ -234,6 +262,8 @@
 				3BBA98961E18D1D800380B7C /* SettingViewController.h */,
 				3BBA98971E18D1D800380B7C /* SettingViewController.m */,
 				3BBA98981E18D1D800380B7C /* SettingViewController.xib */,
+				AD88C3F31E1AD125005FCB0E /* MainViewController.h */,
+				AD88C3F41E1AD125005FCB0E /* MainViewController.m */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -338,6 +368,9 @@
 				AD88C3B81E1A9083005FCB0E /* HomeTableViewCell.xib */,
 				AD88C3BB1E1A9148005FCB0E /* MemoryDetailViewController.h */,
 				AD88C3BC1E1A9148005FCB0E /* MemoryDetailViewController.m */,
+				AD88C4011E1AEC5D005FCB0E /* EditRecordViewController.h */,
+				AD88C4021E1AEC5D005FCB0E /* EditRecordViewController.m */,
+				AD88C4031E1AEC5D005FCB0E /* EditRecordViewController.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -352,6 +385,7 @@
 				AD88C3C41E1A91E4005FCB0E /* EditTargetViewController.m */,
 				AD88C3DA1E1A9438005FCB0E /* AddTargetViewController.h */,
 				AD88C3DB1E1A9438005FCB0E /* AddTargetViewController.m */,
+				AD88C3F61E1AD843005FCB0E /* AddTargetViewController.xib */,
 				AD88C3E01E1A947D005FCB0E /* AddCustomTargetViewController.h */,
 				AD88C3E11E1A947D005FCB0E /* AddCustomTargetViewController.m */,
 				AD88C3E21E1A947D005FCB0E /* AddCustomTargetViewController.xib */,
@@ -370,6 +404,46 @@
 				AD88C3D31E1A93FB005FCB0E /* DisMatchViewController.xib */,
 			);
 			path = MineView;
+			sourceTree = "<group>";
+		};
+		AD88C3E51E1ACB77005FCB0E /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C3E91E1ACBC2005FCB0E /* LoginViewController.h */,
+				AD88C3EA1E1ACBC2005FCB0E /* LoginViewController.m */,
+				AD88C3EB1E1ACBC2005FCB0E /* LoginViewController.xib */,
+				AD88C3EE1E1ACBD3005FCB0E /* MatchViewController.h */,
+				AD88C3EF1E1ACBD3005FCB0E /* MatchViewController.m */,
+				AD88C3F01E1ACBD3005FCB0E /* MatchViewController.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		AD88C3F81E1ADF5F005FCB0E /* External */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C3FD1E1ADF90005FCB0E /* UILabel+StringFrame */,
+				AD88C3F91E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		AD88C3F91E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C3FA1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.h */,
+				AD88C3FB1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.m */,
+			);
+			path = "MBProgressHUD+ShowQuickTips";
+			sourceTree = "<group>";
+		};
+		AD88C3FD1E1ADF90005FCB0E /* UILabel+StringFrame */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C3FE1E1ADF90005FCB0E /* UILabel+StringFrame.h */,
+				AD88C3FF1E1ADF90005FCB0E /* UILabel+StringFrame.m */,
+			);
+			path = "UILabel+StringFrame";
 			sourceTree = "<group>";
 		};
 		D60CB821457CDEFB04EC76C0 /* Pods */ = {
@@ -442,8 +516,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD88C3F21E1ACBD3005FCB0E /* MatchViewController.xib in Resources */,
+				AD88C4051E1AEC5D005FCB0E /* EditRecordViewController.xib in Resources */,
 				AD88C3E41E1A947D005FCB0E /* AddCustomTargetViewController.xib in Resources */,
 				3BA0EF631E15514200AF8A21 /* LaunchScreen.storyboard in Resources */,
+				AD88C3F71E1AD843005FCB0E /* AddTargetViewController.xib in Resources */,
 				AD88C3D91E1A93FB005FCB0E /* MyHeaderTableViewCell.xib in Resources */,
 				3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */,
 				AD88C3BA1E1A9083005FCB0E /* HomeTableViewCell.xib in Resources */,
@@ -451,6 +528,7 @@
 				3BA0EF601E15514200AF8A21 /* Assets.xcassets in Resources */,
 				AD88C3C21E1A916A005FCB0E /* TargetTableViewCell.xib in Resources */,
 				3BA0EF5B1E15514200AF8A21 /* Main.storyboard in Resources */,
+				AD88C3ED1E1ACBC2005FCB0E /* LoginViewController.xib in Resources */,
 				AD88C3D71E1A93FB005FCB0E /* DisMatchViewController.xib in Resources */,
 				3BBA989C1E18D1D800380B7C /* HomeViewController.xib in Resources */,
 				3BBA98A01E18D1D800380B7C /* SettingViewController.xib in Resources */,
@@ -518,30 +596,36 @@
 				AD88C3BD1E1A9148005FCB0E /* MemoryDetailViewController.m in Sources */,
 				3BD2CF341E1A815A008E9C2D /* ServiceCheck.m in Sources */,
 				AD88C3AF1E1A7FC1005FCB0E /* CheckObject.m in Sources */,
+				AD88C3FC1E1ADF7D005FCB0E /* MBProgressHUD+ShowQuickTips.m in Sources */,
 				3BBA98B21E18DB7200380B7C /* ServiceRecord.m in Sources */,
 				AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */,
 				AD88C3E31E1A947D005FCB0E /* AddCustomTargetViewController.m in Sources */,
 				AD88C3DC1E1A9438005FCB0E /* AddTargetViewController.m in Sources */,
 				AD88C3D81E1A93FB005FCB0E /* MyHeaderTableViewCell.m in Sources */,
 				3BA0EF551E15514200AF8A21 /* AppDelegate.m in Sources */,
+				AD88C4041E1AEC5D005FCB0E /* EditRecordViewController.m in Sources */,
 				3BA0EF5E1E15514200AF8A21 /* Lovers.xcdatamodeld in Sources */,
 				AD88C3D21E1A93ED005FCB0E /* DisMatchViewController.m in Sources */,
 				3BA0EF521E15514200AF8A21 /* main.m in Sources */,
 				AD88C3B11E1A7FC1005FCB0E /* Memory.m in Sources */,
 				3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */,
+				AD88C4001E1ADF90005FCB0E /* UILabel+StringFrame.m in Sources */,
 				AD88C3A31E1A5847005FCB0E /* BaseTableViewController.m in Sources */,
 				AD88C3B21E1A7FC1005FCB0E /* TargetObject.m in Sources */,
 				3BBA989D1E18D1D800380B7C /* ResumeViewController.m in Sources */,
 				3BBA989B1E18D1D800380B7C /* HomeViewController.m in Sources */,
 				3BD2CF101E18DDBD008E9C2D /* RecordObject.m in Sources */,
+				AD88C3F51E1AD125005FCB0E /* MainViewController.m in Sources */,
 				3BBA98A91E18D38400380B7C /* ServiceUser.m in Sources */,
 				3BBA989F1E18D1D800380B7C /* SettingViewController.m in Sources */,
 				3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */,
 				3BD2CF191E190FC9008E9C2D /* UserObject.m in Sources */,
 				AD88C3B91E1A9083005FCB0E /* HomeTableViewCell.m in Sources */,
 				AD88C3C11E1A916A005FCB0E /* TargetTableViewCell.m in Sources */,
+				AD88C3F11E1ACBD3005FCB0E /* MatchViewController.m in Sources */,
 				3BBA98A31E18D21100380B7C /* Appearance.m in Sources */,
 				3BBA98A61E18D28500380B7C /* NetworkBase.m in Sources */,
+				AD88C3EC1E1ACBC2005FCB0E /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

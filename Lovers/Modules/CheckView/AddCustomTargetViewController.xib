@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCustomTargetViewController">
             <connections>
+                <outlet property="planTimeTextField" destination="XPd-p5-QzC" id="gzT-b0-nLO"/>
+                <outlet property="planTitleTextField" destination="jVd-Ox-sWb" id="cz9-aY-xOz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +20,74 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVd-Ox-sWb">
+                    <rect key="frame" x="0.0" y="64" width="375" height="48"/>
+                    <color key="backgroundColor" red="0.9959825873374939" green="0.99621325731277466" blue="0.99187678098678589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="nqP-Pn-a4X"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划标题：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pj-hK-JiH">
+                    <rect key="frame" x="10" y="30" width="349" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="5tk-pf-RoH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入计划时间" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPd-p5-QzC">
+                    <rect key="frame" x="0.0" y="159" width="375" height="48"/>
+                    <color key="backgroundColor" red="0.9959825873374939" green="0.99621325731277466" blue="0.99187678098678589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="4CQ-qC-Ucn"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-sE-Bzx">
+                    <rect key="frame" x="10" y="125" width="349" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="lsn-7Q-vre"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPy-KI-xAj">
+                    <rect key="frame" x="0.0" y="246" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.8659822345" green="0.36681994890000003" blue="0.4716028618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zLt-5Z-pPF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="确 认"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oPy-KI-xAj" firstAttribute="top" secondItem="XPd-p5-QzC" secondAttribute="bottom" constant="39" id="0sF-ty-EHP"/>
+                <constraint firstItem="XPd-p5-QzC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2kD-CQ-Q9q"/>
+                <constraint firstAttribute="trailing" secondItem="USM-sE-Bzx" secondAttribute="trailing" constant="16" id="CVc-mv-RkJ"/>
+                <constraint firstAttribute="trailing" secondItem="oPy-KI-xAj" secondAttribute="trailing" id="Gv3-YW-pEj"/>
+                <constraint firstItem="8Pj-hK-JiH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="UAs-M9-p0P"/>
+                <constraint firstItem="8Pj-hK-JiH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="W6a-hr-qmM"/>
+                <constraint firstItem="XPd-p5-QzC" firstAttribute="top" secondItem="USM-sE-Bzx" secondAttribute="bottom" constant="8" id="Z3P-2B-azj"/>
+                <constraint firstItem="USM-sE-Bzx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="b2L-eZ-H9T"/>
+                <constraint firstAttribute="trailing" secondItem="8Pj-hK-JiH" secondAttribute="trailing" constant="16" id="hLn-n7-HMB"/>
+                <constraint firstItem="USM-sE-Bzx" firstAttribute="top" secondItem="jVd-Ox-sWb" secondAttribute="bottom" constant="13" id="htM-Cz-GMg"/>
+                <constraint firstItem="jVd-Ox-sWb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="jD1-Wk-jfv"/>
+                <constraint firstAttribute="trailing" secondItem="XPd-p5-QzC" secondAttribute="trailing" id="lRG-tF-G5z"/>
+                <constraint firstItem="jVd-Ox-sWb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pvU-Nu-Xxp"/>
+                <constraint firstAttribute="trailing" secondItem="jVd-Ox-sWb" secondAttribute="trailing" id="rIG-f4-5uY"/>
+                <constraint firstItem="oPy-KI-xAj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y8C-Q8-iEU"/>
+            </constraints>
+            <point key="canvasLocation" x="58.5" y="51.5"/>
         </view>
     </objects>
 </document>

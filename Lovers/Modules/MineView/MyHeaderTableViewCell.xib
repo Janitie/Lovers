@@ -1,19 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MyHeaderTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="KGk-i7-Jjw" customClass="MyHeaderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vdd-WM-oUP">
+                        <rect key="frame" x="116" y="23.5" width="88" height="88"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Vdd-WM-oUP" secondAttribute="height" multiplier="1:1" id="fZV-Xv-vJt"/>
+                            <constraint firstAttribute="width" constant="88" id="qpr-p3-eWn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtp-uC-RLc">
+                        <rect key="frame" x="8" y="111.5" width="304" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOVERS" translatesAutoresizingMaskIntoConstraints="NO" id="zKL-Qe-XFF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="zKL-Qe-XFF" secondAttribute="bottom" constant="-9" id="6H0-e8-BYu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vdd-WM-oUP" secondAttribute="bottom" constant="30" id="6Oe-ev-L7v"/>
+                    <constraint firstItem="xtp-uC-RLc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="C6h-MV-2FH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xtp-uC-RLc" secondAttribute="trailing" id="Pjh-J9-uw1"/>
+                    <constraint firstItem="zKL-Qe-XFF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Q9c-ej-VgB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zKL-Qe-XFF" secondAttribute="trailing" constant="-8" id="Rcz-Sq-EZB"/>
+                    <constraint firstItem="Vdd-WM-oUP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="V8p-ag-Oj9"/>
+                    <constraint firstItem="zKL-Qe-XFF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="W4s-ii-mld"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xtp-uC-RLc" secondAttribute="bottom" constant="-8" id="p8u-LN-s2d"/>
+                    <constraint firstItem="xtp-uC-RLc" firstAttribute="top" secondItem="Vdd-WM-oUP" secondAttribute="bottom" id="qv6-l5-7qU"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="bgImageView" destination="zKL-Qe-XFF" id="M0d-1a-q6J"/>
+                <outlet property="headImageView" destination="Vdd-WM-oUP" id="Bcp-xx-2Go"/>
+                <outlet property="nickNameLabel" destination="xtp-uC-RLc" id="JJ6-cP-y94"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="37"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="LOVERS" width="307" height="47"/>
+    </resources>
 </document>

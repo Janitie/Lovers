@@ -10,4 +10,12 @@
 
 @interface HomeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *recordTitle;
+@property (weak, nonatomic) IBOutlet UILabel *achieveTime;
+@property (weak, nonatomic) IBOutlet UIImageView *posterImg;
+
++ (UINib *)cellNib;
++ (CGFloat)cellHeight;
++ (NSString *)CellReuseIdentifier;
+
 @end
