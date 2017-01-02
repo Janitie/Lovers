@@ -19,11 +19,11 @@ static NSString * KeyStatus = @"isComplete";
     return CheckClass;
 }
 
-- (void)setUser:(UserObject *)user {
+- (void)setUser:(AVUser *)user {
     [self.avObject setObject:user forKey:KeyUser];
 }
 
-- (UserObject *)user {
+- (AVUser *)user {
     return [self.avObject objectForKey:KeyUser];
 }
 

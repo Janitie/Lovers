@@ -12,7 +12,6 @@
 
 @interface ServiceRecord : NSObject
 
-
 + (void)fetchRecordListCallback:(RecordListBlock)callback;
 
 @end

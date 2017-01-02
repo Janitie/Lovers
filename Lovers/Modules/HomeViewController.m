@@ -8,6 +8,7 @@
 
 #import "ServiceUser.h"
 #import "ServiceRecord.h"
+#import "ServiceCheck.h"
 #import "HomeViewController.h"
 #import "Memory.h"
 
@@ -21,6 +22,42 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"纪念";
+    
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    [ServiceUser logInWithUsername:@"user3"
+                          password:DEFAULT_PASSWORD
+                          callback:^(UserObject * cUser,NSString * mCode) {
+                              if (cUser) {
+                                  NSLog(@"good log");
+                                  NSLog(@"%@",mCode);
+                                  
+//                                  [ServiceUser isMatchedWithCallback:^(BOOL answer) {
+//                                      if (answer) {
+//                                          NSLog(@"taken");
+//                                      }
+//                                  }];
+//                                  [ServiceCheck creatNewWithTitle:@"fuck"
+//                                                       finishTime:[NSDate date]
+//                                                         callback:^(BOOL succeeded) {
+//                                                             if (succeeded) {
+//                                                                 NSLog(@"new check");
+//                                                             }
+//                                                         }];
+//                                  [ServiceCheck deleteWithTitle:@"fuck"
+//                                                       callback:^(BOOL succeeded) {
+//                                                           if (succeeded) {
+//                                                               NSLog(@"no fuck");
+//                                                           }
+//                                                       }];
+                              }
+                              else {
+                                  NSLog(@"bad log");
+                              }
+                          }];
+    
+   
+    
 }
     
 
