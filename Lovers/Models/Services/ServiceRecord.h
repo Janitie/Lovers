@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "RecordObject.h"
 #import "Memory.h"
+#import "ServiceCheck.h"
 
 @interface ServiceRecord : NSObject
 
 //creatRecord
-+ (void)creatRecordWithTitle:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void(^)(BOOL))callback;
++ (void)creatRecordWithCheck:(CheckObject *)cObject Title:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void(^)(BOOL))callback;
 
 
 + (void)fetchRecordListCallback:(RecordListBlock)callback;

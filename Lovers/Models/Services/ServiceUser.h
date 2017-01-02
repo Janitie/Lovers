@@ -16,10 +16,10 @@
 @interface ServiceUser : NSObject
 
 //signUp
-+ (void) signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void(^)(BOOL))callback;
++ (void) signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void(^)(BOOL succeed))callback;
 
 //logIn
-+ (void) logInWithUsername:(NSString *)username password:(NSString *)password callback:(void(^)(UserObject *,NSString *))callback;
++ (void) logInWithUsername:(NSString *)username password:(NSString *)password callback:(void(^)(UserObject * user,NSString * mCode))callback;
 
 //logOut
 + (void) exit;
@@ -28,7 +28,7 @@
 + (void) matchUserWithCode:(NSString *)mCode callback:(void(^)(BOOL succeed, NSError *error))callback;
 
 //Matched?
-+ (void) isMatchedWithCallback:(void(^)(BOOL,Memory *))callback;
++ (void) isMatchedWithCallback:(void(^)(BOOL succeed,Memory * currentMemo))callback;
 
 //dismatch
 

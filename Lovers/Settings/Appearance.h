@@ -21,3 +21,22 @@
 + (void)defaultAppearance;
 
 @end
+
+
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go fly",@"go out midnight",@"drink wine",
+//                        @"play hide",@"play game6",@"sing a song", nil];6
+//
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go climb",@"go out evening",@"eat rice",
+//                        @"play laptop",@"play game5",@"speak spanish", nil];4
+//
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go jump",@"go out afternoon",@"eat bread",
+//                        @"play ball",@"play game4",@"speak english", nil];3
+//
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go dive",@"go out morning",@"eat paper",
+//                        @"play vollyball",@"play game3",@"speak chinese", nil];2
+//
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go hiking",@"go out night",@"eat crab",
+//                        @"play baseball",@"play game2",@"cry out loud", nil];   1
+//
+//NSArray * checkArray = [NSArray arrayWithObjects:@"go swim",@"go hunt",@"eat dinner",
+//                        @"play football",@"play game",@"laugh out loud", nil];5

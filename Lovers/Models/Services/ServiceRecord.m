@@ -12,7 +12,7 @@
 @implementation ServiceRecord
 
 #pragma mark - creat Record
-+ (void)creatRecordWithTitle:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void (^)(BOOL))callback {
++ (void)creatRecordWithCheck:(CheckObject *)cObject Title:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void (^)(BOOL))callback {
     RecordObject * newRecord = [RecordObject newObject];
     newRecord.title = title;
     newRecord.content = content;
@@ -21,11 +21,15 @@
     
     [newRecord.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
-            Memory * cMemo = [[LocalDataObject Instance] currentMemory];
-            [cMemo setRecords:@[newRecord]
-                     callback:^(BOOL succeed, NSError *error) {
-                             callback(succeed);
-                     }];
+            [ServiceCheck changeStatusWithObject:cObject Callback:^(BOOL succeeded) {
+                if (succeeded) {
+                    Memory * cMemo = [[LocalDataObject Instance] currentMemory];
+                    [cMemo setRecords:@[newRecord]
+                             callback:^(BOOL succeed, NSError *error) {
+                                 callback(succeed);
+                             }];
+                }
+            }];
         }
         else {
             callback(error);
