@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view from its nib.
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = @"home";
+    self.title = @"纪念";
     
     
     // 注册

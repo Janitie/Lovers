@@ -30,19 +30,23 @@
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     
     HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"home" image:NULL tag:0];
+    homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"纪念" image:NULL tag:0];
     UINavigationController *naviHome = [[UINavigationController alloc] initWithRootViewController:homeViewController];
-    [tabbarController addChildViewController:naviHome];
+//    [tabbarController addChildViewController:naviHome];
     
     CheckTableViewController *checkTableViewController = [[CheckTableViewController alloc] init];
-    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:1];
-    UINavigationController *naviCheck = [[UINavigationController alloc] initWithRootViewController:checkTableViewController];
-    [tabbarController addChildViewController:naviCheck];
+    checkTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"目标" image:NULL tag:1];
+    UINavigationController * naviCheck = [[UINavigationController alloc] initWithRootViewController:checkTableViewController];
+//    [tabbarController addChildViewController:naviCheck];
     
     SettingViewController *settingTableViewController = [[SettingViewController alloc] init];
-    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:2];
+    settingTableViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:NULL tag:2];
     UINavigationController *naviSet = [[UINavigationController alloc] initWithRootViewController:settingTableViewController];
-    [tabbarController addChildViewController:naviSet];
+//    [tabbarController addChildViewController:naviSet];
+    
+    tabbarController.viewControllers = @[naviHome,
+                                         naviCheck,
+                                         naviSet];
     
     self.window.rootViewController = tabbarController;
     

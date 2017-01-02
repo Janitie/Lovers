@@ -21,7 +21,6 @@
 		3BBA98501E16310900380B7C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA984F1E16310900380B7C /* MobileCoreServices.framework */; };
 		3BBA98521E16311800380B7C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA98511E16311800380B7C /* CoreTelephony.framework */; };
 		3BBA98541E16312400380B7C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBA98531E16312400380B7C /* CoreLocation.framework */; };
-		3BBA98581E165B9400380B7C /* LOVERS.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA98571E165B9400380B7C /* LOVERS.png */; };
 		3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */; };
 		3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */; };
 		3BBA989B1E18D1D800380B7C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBA98911E18D1D800380B7C /* HomeViewController.m */; };
@@ -37,6 +36,7 @@
 		3BD2CF101E18DDBD008E9C2D /* RecordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF0F1E18DDBD008E9C2D /* RecordObject.m */; };
 		3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */; };
 		3BD2CF191E190FC9008E9C2D /* UserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF181E190FC9008E9C2D /* UserObject.m */; };
+		AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C39D1E1925F9005FCB0E /* BaseViewController.m */; };
 		CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC920B325A5017925D78351F /* libPods-Lovers.a */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,6 @@
 		3BBA98511E16311800380B7C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3BBA98531E16312400380B7C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BBA98551E16313700380B7C /* libAVOSCloud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAVOSCloud.a; path = "Pods/../build/Debug-iphoneos/AVOSCloud/libAVOSCloud.a"; sourceTree = "<group>"; };
-		3BBA98571E165B9400380B7C /* LOVERS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOVERS.png; path = ../../../../Desktop/LOVERS.png; sourceTree = "<group>"; };
 		3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckTableViewController.h; sourceTree = "<group>"; };
 		3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckTableViewController.m; sourceTree = "<group>"; };
 		3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckTableViewController.xib; sourceTree = "<group>"; };
@@ -88,6 +87,10 @@
 		3BD2CF171E190FC9008E9C2D /* UserObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserObject.h; sourceTree = "<group>"; };
 		3BD2CF181E190FC9008E9C2D /* UserObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserObject.m; sourceTree = "<group>"; };
 		6ED336D48A682BBCF4B14786 /* Pods-Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lovers/Pods-Lovers.debug.xcconfig"; sourceTree = "<group>"; };
+		AD88C39B1E19256E005FCB0E /* BaseViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewProtocol.h; sourceTree = "<group>"; };
+		AD88C39C1E1925F9005FCB0E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		AD88C39D1E1925F9005FCB0E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		AD88C3A01E193679005FCB0E /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		CC920B325A5017925D78351F /* libPods-Lovers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lovers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,7 +139,6 @@
 				3BBA98891E18CF1400380B7C /* Models */,
 				3BBA985F1E16629000380B7C /* Settings */,
 				3BBA985E1E165F1F00380B7C /* Modules */,
-				3BBA98571E165B9400380B7C /* LOVERS.png */,
 				3BA0EF531E15514200AF8A21 /* AppDelegate.h */,
 				3BA0EF541E15514200AF8A21 /* AppDelegate.m */,
 				3BA0EF591E15514200AF8A21 /* Main.storyboard */,
@@ -145,6 +147,7 @@
 				3BA0EF641E15514200AF8A21 /* Info.plist */,
 				3BA0EF5C1E15514200AF8A21 /* Lovers.xcdatamodeld */,
 				3BA0EF501E15514200AF8A21 /* Supporting Files */,
+				AD88C3A01E193679005FCB0E /* Prefix.pch */,
 			);
 			path = Lovers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 		3BBA985E1E165F1F00380B7C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD88C39A1E1924BF005FCB0E /* Base */,
 				3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */,
 				3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */,
 				3BBA988F1E18D1D800380B7C /* CheckTableViewController.xib */,
@@ -244,6 +248,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD88C39A1E1924BF005FCB0E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C39B1E19256E005FCB0E /* BaseViewProtocol.h */,
+				AD88C39C1E1925F9005FCB0E /* BaseViewController.h */,
+				AD88C39D1E1925F9005FCB0E /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		D60CB821457CDEFB04EC76C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +328,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BBA98581E165B9400380B7C /* LOVERS.png in Resources */,
 				3BA0EF631E15514200AF8A21 /* LaunchScreen.storyboard in Resources */,
 				3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */,
 				3BBA989E1E18D1D800380B7C /* ResumeViewController.xib in Resources */,
@@ -381,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BBA98B21E18DB7200380B7C /* ServiceRecord.m in Sources */,
+				AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */,
 				3BA0EF551E15514200AF8A21 /* AppDelegate.m in Sources */,
 				3BA0EF5E1E15514200AF8A21 /* Lovers.xcdatamodeld in Sources */,
 				3BA0EF521E15514200AF8A21 /* main.m in Sources */,
@@ -449,6 +463,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -495,6 +511,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -514,6 +532,8 @@
 			baseConfigurationReference = 6ED336D48A682BBCF4B14786 /* Pods-Lovers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Lovers/Prefix.pch";
 				INFOPLIST_FILE = Lovers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -530,6 +550,8 @@
 			baseConfigurationReference = 00E0C848949350F47226DF36 /* Pods-Lovers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Lovers/Prefix.pch";
 				INFOPLIST_FILE = Lovers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
