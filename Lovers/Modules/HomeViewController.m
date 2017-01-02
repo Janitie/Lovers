@@ -9,6 +9,7 @@
 #import "ServiceUser.h"
 #import "ServiceRecord.h"
 #import "HomeViewController.h"
+#import "Memory.h"
 
 @interface HomeViewController ()
 
@@ -22,29 +23,33 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"纪念";
+//    
+    [ServiceUser signUpWithOpenId:@"99576"
+                         username:@"Jim1"
+                         password:@"jim1"
+                         callback:^(BOOL succeeded) {
+                             if (succeeded) {
+                                 NSLog(@"signup succeed");
+                             }
+                             else {
+                                 NSLog(@"nil User");
+                             }
+                         }];
     
+//    [UserObject logInWithUsernameInBackground:@"Jim"
+//                                     password:@"jim"
+//                                        block:^(AVUser * _Nullable user, NSError * _Nullable error) {
+//                                            UserObject *userObj = (UserObject *)user;
+//                                            userObj.gender = @(1);
+//                                            [userObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+//                                                if (succeeded) {
+//                                                    NSLog(@"modify gender succeed");
+//                                                }else {
+//                                                    NSLog(@"fail modify gender , error = %@", error);
+//                                                }
+//                                            }];
+//                                        }];
     
-    // 注册
-    [ServiceUser signUpWithUserName:@"bolo"
-                           password:@"password"
-                           callback:^(BOOL succeed) {
-                               if (succeed){
-                                   // 跳转
-                               } else {
-                                   // 提示错误
-                               }
-                           }];
-    
-    // 查询纪念册内容（列表）
-    [ServiceRecord fetchRecordListWithUserId:@"userId"
-                                    callback:^(NSArray<RecordObject *> *objects, NSError *error) {
-                                        if (!error) {
-                                            // 成功
-                                                                                        
-                                        } else {
-                                            // 失败
-                                        }
-                                    }];
 }
     
 

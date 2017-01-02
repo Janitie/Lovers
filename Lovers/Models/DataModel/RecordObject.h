@@ -7,6 +7,7 @@
 //
 
 #import <AVOSCloud/AVOSCloud.h>
+#import "UserObject.h"
 
 static NSString * RecordClass = @"Record";
 
@@ -15,7 +16,7 @@ static NSString * RecordClass = @"Record";
 @property (nonatomic) NSString * title;     //标题
 @property (nonatomic) NSString * content;   //文字内容
 @property (nonatomic) NSString * imgUrl;    //图片
-@property (nonatomic) AVUser * creator;     //创建人ID
+@property (nonatomic) UserObject * creator;     //创建人ID
 
 + (instancetype) Record;
 
