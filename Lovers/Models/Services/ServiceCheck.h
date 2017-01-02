@@ -22,6 +22,7 @@
 + (void)deleteWithTitle:(NSString *)title callback:(void(^)(BOOL succeeded))callback;
 
 //change
-//+ (void)changeTitle;
++ (void)changeTitleTo:(NSString *)newTitle withObject:(CheckObject *)check callback:(void(^)(BOOL succeeded))callback;
++ (void)changeFinishTimeTo:(NSDate *)newDate withObject:(CheckObject *)check callback:(void(^)(BOOL succeeded))callback;
 
 @end

@@ -14,6 +14,8 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic, strong) CheckObject * tempCheck;
+
 @end
 
 @implementation HomeViewController
@@ -50,13 +52,35 @@
 //                                                               NSLog(@"no fuck");
 //                                                           }
 //                                                       }];
+//                                
+//                                  WS(weakSelf);
+//                                  [ServiceCheck findInCheckBoxWithTitle:@"dance"
+//                                                               Callback:^(BOOL succeeded, CheckObject *checkie) {
+//                                                                   if (succeeded) {
+//                                                                       weakSelf.tempCheck = checkie;
+//                                                                       
+////                                                                       [ServiceCheck changeTitleTo:@"dance"
+////                                                                                        withObject:checkie
+////                                                                                          callback:^(BOOL succeeded) {
+////                                                                                              if (succeeded) {
+////                                                                                                  NSLog(@"lets dance");
+////                                                                                              }
+////                                                                                          }];
+////                                                                       [ServiceCheck changeFinishTimeTo:[NSDate date]
+////                                                                                             withObject:checkie
+////                                                                                               callback:^(BOOL succeeded) {
+////                                                                                                   if (succeeded) {
+////                                                                                                       NSLog(@"new date");
+////                                                                                                   }
+////                                                                                               }];
+//                                                                       
+//                                                                   }
+//                                                               }];
                               }
                               else {
                                   NSLog(@"bad log");
                               }
                           }];
-    
-   
     
 }
     

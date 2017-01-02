@@ -52,4 +52,40 @@
                          }];
 }
 
++ (void)changeTitleTo:(NSString *)newTitle withObject:(CheckObject *)check callback:(void (^)(BOOL))callback {
+    [self findInCheckBoxWithTitle:check.title
+                         Callback:^(BOOL succeeded, CheckObject *checkie) {
+                             if (succeeded) {
+                                 checkie.title = newTitle;
+                                 [checkie.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                     if (succeeded) {
+                                         callback(YES);
+                                     }
+                                     else {
+                                         callback(error);
+                                     }
+                                 }];
+                             }
+                         }];
+}
+
++ (void)changeFinishTimeTo:(NSDate *)newDate withObject:(CheckObject *)check callback:(void (^)(BOOL))callback {
+    [self findInCheckBoxWithTitle:check.title
+                         Callback:^(BOOL succeeded, CheckObject *checkie) {
+                             if (succeeded) {
+                                 checkie.finishTime = newDate;
+                                 [checkie.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                                     if (succeeded) {
+                                         callback(YES);
+                                     }
+                                     else {
+                                         callback(error);
+                                     }
+                                 }];
+                             }
+                         }];
+
+}
+
+
 @end
