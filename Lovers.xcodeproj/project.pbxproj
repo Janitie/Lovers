@@ -184,6 +184,9 @@
 		3BBA985E1E165F1F00380B7C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD88C3B51E1A8DD8005FCB0E /* MineView */,
+				AD88C3B41E1A8DC8005FCB0E /* CheckView */,
+				AD88C3B31E1A8DBC005FCB0E /* HomeView */,
 				AD88C39A1E1924BF005FCB0E /* Base */,
 				3BBA988D1E18D1D800380B7C /* CheckTableViewController.h */,
 				3BBA988E1E18D1D800380B7C /* CheckTableViewController.m */,
@@ -291,6 +294,27 @@
 				AD88C3A51E1A66B3005FCB0E /* BaseResfreshTableViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		AD88C3B31E1A8DBC005FCB0E /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		AD88C3B41E1A8DC8005FCB0E /* CheckView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CheckView;
+			sourceTree = "<group>";
+		};
+		AD88C3B51E1A8DD8005FCB0E /* MineView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MineView;
 			sourceTree = "<group>";
 		};
 		D60CB821457CDEFB04EC76C0 /* Pods */ = {
