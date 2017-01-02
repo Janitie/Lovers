@@ -44,38 +44,22 @@
     }];
 }
 
-+ (void)findCheckWithStatus:(BOOL)status callback:(void (^)(NSArray<CheckObject *> *, NSError *))callback {
++ (void)findCheckWithStatus:(BOOL)status callback:(void (^)(NSArray<AVObject *> *, NSError *))callback {
     AVQuery * query = [AVQuery queryWithClassName:CheckClass];
     [query whereKey:@"isComplete" equalTo:@(status)];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (objects && objects > 0) {
-            NSMutableArray * cArray = [NSMutableArray array];
-            for (AVObject * chekie in objects) {
-                CheckObject * tCheck = [CheckObject objectWithObject:chekie];
-                [cArray addObject:tCheck];
-            }
-            callback(cArray,nil);
-        }
-        else {
-            callback(nil,error);
+        if (!error) {
+            callback(objects,nil);
         }
     }];
     
 }
 
-+ (void)findAllCheckCallback:(void (^)(NSArray<CheckObject *> * checkList, NSError * error))callback {
++ (void)findAllCheckCallback:(void (^)(NSArray<AVObject *> * checkList, NSError * error))callback {
     AVQuery * query = [AVQuery queryWithClassName:CheckClass];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (objects && objects.count >0) {
-            NSMutableArray * cArray = [NSMutableArray array];
-            for (AVObject * checkie in objects) {
-                CheckObject * tCheck = [CheckObject objectWithObject:checkie];
-                [cArray addObject:tCheck];
-            }
-            callback(cArray,nil);
-        }
-        else {
-            callback(nil,error);
+        if (!error) {
+            callback(objects,nil);
         }
     }];
 }

@@ -20,13 +20,15 @@ static NSString * KeyRecords = @"records";
     return [self.avObject relationForKey:KeyRecords];
 }
 
-- (void)setRecords:(NSArray<RecordObject *> *)records
+- (void)setRecords:(NSArray<RecordObject *> *)records callback:(void(^)(BOOL succeed, NSError *error))callback
 {
     AVRelation * relation = self.recordsRelation;
     for (RecordObject * record in records) {
         [relation addObject:record.avObject];
     }
-    [self.avObject saveInBackground];
+    [self.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        callback(succeeded, error);
+    }];
 }
 
 - (void)getRecords:(void (^)(NSArray<RecordObject *> *))callback

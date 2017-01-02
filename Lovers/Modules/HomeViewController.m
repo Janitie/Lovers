@@ -27,30 +27,48 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 
-   
-                                
-//    WS(weakSelf);
-    [ServiceCheck findCheckWithStatus:NO callback:^(NSArray<CheckObject *> *checkList, NSError *error) {
-        if (checkList && checkList.count > 0) {
-            for (CheckObject * cObject in checkList) {
-                NSLog(@"%@",cObject.title);
-            }
-        }
-        else {
-            NSLog(@"not some");
-        }
-    }];
+    [ServiceUser logInWithUsername:@"user3"
+                          password:DEFAULT_PASSWORD
+                          callback:^(UserObject * user, NSString * mCode) {
+                              
+                              [ServiceUser isMatchedWithCallback:^(BOOL isSucceed, Memory * memoryObject) {
+                                  if (isSucceed) {
+                                      NSLog(@"get Memory succeed : %@", memoryObject.avObject.objectId);
+                                      
+                                      [ServiceRecord creatRecordWithTitle:@"catch"
+                                                                  content:@"takes a lot to find cat"
+                                                                   imgUrl:@"baidu"
+                                                                 callback:^(BOOL succeeded) {
+                                                                     if (succeeded) {
+                                                                         NSLog(@"new record");
+                                                                     }
+                                                                 }];
+                                  }
+                              }];
+
+                              
+                              
+                              
+//                              [ServiceUser matchUserWithCode:@"660ee"
+//                                                    callback:^(BOOL succeed, NSError *error) {
+//                                                        if (succeed) {
+//                                                            NSLog(@"matched");
+//                                                        }
+//                                                    }];
+//                              
+                          }];
     
-//    [ServiceCheck findAllCheckCallback:^(NSArray<CheckObject *> *checkList, NSError *error) {
-//        if (checkList && checkList.count > 0) {
-//            for (CheckObject * cObject in checkList) {
-//                NSLog(@"%@",cObject.title);
-//            }
-//        }
-//        else {
-//            NSLog(@"not any");
-//        }
-//    }];
+//    [ServiceCheck findCheckWithStatus:YES
+//                             callback:^(NSArray<AVObject *> *checkList, NSError *error) {
+//                                 if (checkList) {
+//                                     for (AVObject * check in checkList) {
+//                                         CheckObject * checkie = [CheckObject objectWithObject:check];
+//                                         NSLog(@"%@",checkie.title);
+//                                     }
+//                                 }
+//                             }];
+    
+    
 }
     
 

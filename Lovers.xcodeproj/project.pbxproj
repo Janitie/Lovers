@@ -37,6 +37,7 @@
 		3BD2CF131E18E14B008E9C2D /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */; };
 		3BD2CF191E190FC9008E9C2D /* UserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF181E190FC9008E9C2D /* UserObject.m */; };
 		3BD2CF341E1A815A008E9C2D /* ServiceCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF331E1A815A008E9C2D /* ServiceCheck.m */; };
+		3BD2CF371E1ABE29008E9C2D /* LocalDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CF361E1ABE29008E9C2D /* LocalDataObject.m */; };
 		AD88C39E1E1925F9005FCB0E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C39D1E1925F9005FCB0E /* BaseViewController.m */; };
 		AD88C3A31E1A5847005FCB0E /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3A21E1A5846005FCB0E /* BaseTableViewController.m */; };
 		AD88C3A61E1A66B3005FCB0E /* BaseResfreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3A51E1A66B3005FCB0E /* BaseResfreshTableViewController.m */; };
@@ -108,6 +109,8 @@
 		3BD2CF181E190FC9008E9C2D /* UserObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserObject.m; sourceTree = "<group>"; };
 		3BD2CF321E1A815A008E9C2D /* ServiceCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCheck.h; sourceTree = "<group>"; };
 		3BD2CF331E1A815A008E9C2D /* ServiceCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCheck.m; sourceTree = "<group>"; };
+		3BD2CF351E1ABE29008E9C2D /* LocalDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDataObject.h; sourceTree = "<group>"; };
+		3BD2CF361E1ABE29008E9C2D /* LocalDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDataObject.m; sourceTree = "<group>"; };
 		6ED336D48A682BBCF4B14786 /* Pods-Lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lovers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lovers/Pods-Lovers.debug.xcconfig"; sourceTree = "<group>"; };
 		AD88C39B1E19256E005FCB0E /* BaseViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewProtocol.h; sourceTree = "<group>"; };
 		AD88C39C1E1925F9005FCB0E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				3BD2CF121E18E14B008E9C2D /* BaseDataModel.m */,
 				3BD2CF171E190FC9008E9C2D /* UserObject.h */,
 				3BD2CF181E190FC9008E9C2D /* UserObject.m */,
+				3BD2CF351E1ABE29008E9C2D /* LocalDataObject.h */,
+				3BD2CF361E1ABE29008E9C2D /* LocalDataObject.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				3BA0EF521E15514200AF8A21 /* main.m in Sources */,
 				AD88C3B11E1A7FC1005FCB0E /* Memory.m in Sources */,
 				3BBA98991E18D1D800380B7C /* CheckTableViewController.m in Sources */,
+				3BD2CF371E1ABE29008E9C2D /* LocalDataObject.m in Sources */,
 				AD88C3A31E1A5847005FCB0E /* BaseTableViewController.m in Sources */,
 				AD88C3B21E1A7FC1005FCB0E /* TargetObject.m in Sources */,
 				3BBA989D1E18D1D800380B7C /* ResumeViewController.m in Sources */,

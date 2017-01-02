@@ -15,7 +15,7 @@ static NSString * MemoryClassName = @"Memory";
 
 @property (nonatomic, readonly) AVRelation * recordsRelation;
 
-- (void)setRecords: (NSArray<RecordObject *> *)records;
+- (void)setRecords:(NSArray<RecordObject *> *)records callback:(void(^)(BOOL succeed, NSError *error))callback;
 - (void)getRecords: (void(^)(NSArray<RecordObject*> *))callback;
 
 

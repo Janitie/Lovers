@@ -18,8 +18,8 @@
 
 //query
 + (void)findInCheckBoxWithTitle:(NSString *)title Callback:(void(^)(BOOL succeeded,CheckObject * checkie))callback;
-+ (void)findCheckWithStatus:(BOOL)status callback:(void(^)(NSArray<CheckObject *> * checkList,NSError * error))callback;
-+ (void)findAllCheckCallback:(void(^)(NSArray<CheckObject *>* checkList,NSError * error))callback;
++ (void)findCheckWithStatus:(BOOL)status callback:(void(^)(NSArray<AVObject *> * checkList,NSError * error))callback;
++ (void)findAllCheckCallback:(void(^)(NSArray<AVObject *>* checkList,NSError * error))callback;
 
 //delete
 + (void)deleteWithTitle:(NSString *)title callback:(void(^)(BOOL succeeded))callback;

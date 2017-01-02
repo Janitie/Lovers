@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UserObject.h"
 #import "MatchObject.h"
+#import "Memory.h"
 
 #define DEFAULT_PASSWORD @"12345"
 
@@ -27,7 +28,7 @@
 + (void) matchUserWithCode:(NSString *)mCode callback:(void(^)(BOOL succeed, NSError *error))callback;
 
 //Matched?
-+ (void) isMatchedWithCallback:(void(^)(BOOL))callback;
++ (void) isMatchedWithCallback:(void(^)(BOOL,Memory *))callback;
 
 //dismatch
 

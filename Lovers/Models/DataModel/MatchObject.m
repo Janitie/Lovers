@@ -10,12 +10,21 @@
 
 static NSString * KeyUserOne = @"userOne";
 static NSString * KeyUserTwo = @"userTwo";
+static NSString * KeyMemory = @"memory";
 
 @implementation MatchObject
 
 - (NSString *) className
 {
     return MatchClassName;
+}
+
+- (void)setMemory:(AVObject *)memory {
+    [self.avObject setObject:memory forKey:KeyMemory];
+}
+
+- (AVObject *)memory {
+    return [self.avObject objectForKey:KeyMemory];
 }
 
 - (void)setUserOne:(AVObject *)userOne

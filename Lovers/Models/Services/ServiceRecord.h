@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "RecordObject.h"
-#import "UserObject.h"
+#import "Memory.h"
 
 @interface ServiceRecord : NSObject
+
+//creatRecord
++ (void)creatRecordWithTitle:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void(^)(BOOL))callback;
+
 
 + (void)fetchRecordListCallback:(RecordListBlock)callback;
 
