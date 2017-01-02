@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "RecordObject.h"
+#import "UserObject.h"
 
 @interface ServiceRecord : NSObject
 
-+ (void)fetchRecordListWithUserId:(NSString *)userId callback:(RecordListBlock)callback;
+
++ (void)fetchRecordListCallback:(RecordListBlock)callback;
 
 @end

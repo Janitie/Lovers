@@ -23,24 +23,30 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 
-//    [ServiceUser logInWithUsername:@"user3"
-//                          password:DEFAULT_PASSWORD
-//                          callback:^(UserObject * cUser,NSString * mCode) {
-//                              if (cUser) {
-//                                  NSLog(@"good log");
-//                                  NSLog(@"%@",mCode);
-//                                  
+    [ServiceUser logInWithUsername:@"user3"
+                          password:DEFAULT_PASSWORD
+                          callback:^(UserObject * cUser,NSString * mCode) {
+                              if (cUser) {
+                                  NSLog(@"good log");
+                                  NSLog(@"%@",mCode);
+                                  
 //                                  [ServiceUser matchUserWithCode:@"660ee"
 //                                                        callback:^(BOOL succeed, NSError *error) {
 //                                                            if (succeed) {
 //                                                                NSLog(@"good match");
 //                                                            }
 //                                                        }];
-//                              }
-//                              else {
-//                                  NSLog(@"bad log");
-//                              }
-//                          }];
+                                  [ServiceUser isMatchedWithCallback:^(BOOL answer) {
+                                      if (answer) {
+                                          NSLog(@"taken");
+                                      }
+                                  }];
+                              }
+                              else {
+                                  NSLog(@"bad log");
+                              }
+                          }];
+    
     
 //    [ServiceUser signUpWithUsername:@"user3"
 //                           nickname:@"jim"

@@ -11,13 +11,12 @@
 
 static NSString * CheckClass = @"Check";
 
-@interface CheckObject : AVObject
+@interface CheckObject : BaseDataModel
 
 @property (nonatomic) UserObject * user;
 @property (nonatomic) NSString * title;
 @property (nonatomic) NSDate * finishTime;
 @property (nonatomic) BOOL isComplete;
 
-+ (instancetype) Check;
 
 @end

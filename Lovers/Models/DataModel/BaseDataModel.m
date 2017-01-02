@@ -46,7 +46,11 @@
 
 + (instancetype)objectWithObject:(AVObject *)object
 {
-    return [[[self class] alloc] initWithAVObject:object];
+    if (object) {
+        return [[[self class] alloc] initWithAVObject:object];
+    } else {
+        return nil;
+    }
 }
 
 @end

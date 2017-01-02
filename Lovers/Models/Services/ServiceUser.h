@@ -26,6 +26,9 @@
 //match
 + (void) matchUserWithCode:(NSString *)mCode callback:(void(^)(BOOL succeed, NSError *error))callback;
 
+//Matched?
++ (void) isMatchedWithCallback:(void(^)(BOOL))callback;
+
 //dismatch
 
 @end

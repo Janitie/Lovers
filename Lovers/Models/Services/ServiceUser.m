@@ -96,4 +96,30 @@
 }
 
 
++ (void)isMatchedWithCallback:(void (^)(BOOL))callback {
+    UserObject * cUser = [UserObject currentUser];
+    AVQuery * queryFirst = [AVQuery queryWithClassName:MatchClassName];
+    [queryFirst whereKey:@"userOne" equalTo:cUser.user];
+    AVQuery * querySecond = [AVQuery queryWithClassName:MatchClassName];
+    [querySecond whereKey:@"userTwo" equalTo:cUser.user];
+    AVQuery * query = [AVQuery orQueryWithSubqueries:[NSArray arrayWithObjects:querySecond,queryFirst, nil]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        if (objects && objects.count > 0) {
+            MatchObject * match = [MatchObject objectWithObject:objects[0]];
+            if (match) {
+                callback (YES);
+            } else {
+                callback (NO);
+            }
+        } else {
+            callback(NO);
+        }
+
+    }];
+    
+}
+
+
 @end

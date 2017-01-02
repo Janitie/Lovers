@@ -15,48 +15,48 @@ static NSString * const KeyContent = @"content";
 
 @implementation RecordObject
 
-+ (instancetype) Record {
-    return [super objectWithClassName:RecordClass];
+- (NSString *)className {
+    return RecordClass;
 }
 
 - (void)setTitle:(NSString *)title
 {
-    [self setObject:title forKey:KeyTitle];
+    [self.avObject setObject:title forKey:KeyTitle];
 }
 
 - (NSString *)title
 {
-    return [self objectForKey:KeyTitle];
+    return [self.avObject objectForKey:KeyTitle];
 }
 
 - (void)setContent:(NSString *)content
 {
-    [self setObject:content forKey:KeyContent];
+    [self.avObject setObject:content forKey:KeyContent];
 }
 
 - (NSString *)content
 {
-    return [self objectForKey:KeyContent];
+    return [self.avObject objectForKey:KeyContent];
 }
 
 - (void)setImgUrl:(NSString *)imgUrl
 {
-    [self setObject:imgUrl forKey:KeyImgUrl];
+    [self.avObject setObject:imgUrl forKey:KeyImgUrl];
 }
 
 - (NSString *)imgUrl
 {
-    return [self objectForKey:KeyImgUrl];
+    return [self.avObject objectForKey:KeyImgUrl];
 }
 
 - (void)setCreator:(UserObject *)creator
 {
-    [self setObject:creator forKey:KeyCreator];
+    [self.avObject setObject:creator forKey:KeyCreator];
 }
 
 - (UserObject *)creator
 {
-    return [self objectForKey:KeyCreator];
+    return [self.avObject objectForKey:KeyCreator];
 }
 
 @end

@@ -15,40 +15,40 @@ static NSString * KeyStatus = @"isComplete";
 
 @implementation CheckObject
 
-+ (instancetype)Check {
-    return [self objectWithClassName:CheckClass];
+- (NSString *)className {
+    return CheckClass;
 }
 
 - (void)setUser:(UserObject *)user {
-    [self setObject:user forKey:KeyUser];
+    [self.avObject setObject:user forKey:KeyUser];
 }
 
 - (UserObject *)user {
-    return [self objectForKey:KeyUser];
+    return [self.avObject objectForKey:KeyUser];
 }
 
 - (void)setTitle:(NSString *)title {
-    [self setObject:title forKey:KeyTitle];
+    [self.avObject setObject:title forKey:KeyTitle];
 }
 
 - (NSString *)title {
-    return [self objectForKey:KeyTitle];
+    return [self.avObject objectForKey:KeyTitle];
 }
 
 - (void)setFinishTime:(NSDate *)finishTime {
-    [self setObject:finishTime forKey:KeyTime];
+    [self.avObject setObject:finishTime forKey:KeyTime];
 }
 
 - (NSDate *)finishTime {
-    return [self objectForKey:KeyTime];
+    return [self.avObject objectForKey:KeyTime];
 }
 
 - (void)setIsComplete:(BOOL)isComplete {
     if (isComplete == YES) {
-        [self setObject:@(YES) forKey:KeyStatus];
+        [self.avObject setObject:@(YES) forKey:KeyStatus];
     }
     else {
-        [self setObject:@(NO) forKey:KeyStatus];
+        [self.avObject setObject:@(NO) forKey:KeyStatus];
     }
 }
 

@@ -12,12 +12,12 @@ static NSString * KeyTitle = @"title";
 
 @implementation TargetObject
 
-+ (instancetype)Target {
-    return [self objectWithClassName:TargetClass];
+- (NSString *)className {
+    return TargetClass;
 }
 
 - (void)setTitle:(NSString *)title {
-    [self setObject:title forKey:KeyTitle];
+    [self.avObject setObject:title forKey:KeyTitle];
 }
 
 @end

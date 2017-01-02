@@ -11,14 +11,13 @@
 
 static NSString * RecordClass = @"Record";
 
-@interface RecordObject : AVObject
+@interface RecordObject : BaseDataModel
 
 @property (nonatomic) NSString * title;     //标题
 @property (nonatomic) NSString * content;   //文字内容
 @property (nonatomic) NSString * imgUrl;    //图片
 @property (nonatomic) UserObject * creator;     //创建人ID
 
-+ (instancetype) Record;
 
 @end
 
