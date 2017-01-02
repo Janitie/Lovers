@@ -18,16 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    UserObject * currentUser = [UserObject currentUser];
-//    if (currentUser) {
-//        NSLog(@"still in");
-//    }
-//    else {
-//        NSLog(@"gone");
-//    }
 
     self.title = @"目标";
 
+        
 }
 
 - (void)didReceiveMemoryWarning {

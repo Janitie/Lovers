@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BaseResfreshTableViewController.h"
 
+<<<<<<< HEAD
 @interface HomeViewController : BaseResfreshTableViewController
+=======
+@interface HomeViewController : UIViewController
+>>>>>>> origin/master
 
 @end

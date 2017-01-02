@@ -10,8 +10,8 @@
 
 static NSString * const KeyIcon = @"iconUrl";
 static NSString * const KeyGender = @"gender";
-//static NSString * const KeyId = @"openId";
 static NSString * const KeyName = @"nickname";
+static NSString * const KeyCode = @"matchCode";
 
 @interface UserObject ()
 
@@ -39,6 +39,13 @@ static NSString * const KeyName = @"nickname";
     }
 }
 
++ (instancetype)userWithUser:(AVUser *)user
+{
+    UserObject * existUser = [UserObject new];
+    existUser.user = user;
+    return existUser;
+}
+
 #pragma mark - inner
 
 - (void)setUsername:(NSString *)username
@@ -61,6 +68,16 @@ static NSString * const KeyName = @"nickname";
 
 
 #pragma mark - extra
+
+
+- (void)setMCode:(NSString *)mCode {
+    [self.user setObject:mCode forKey:KeyCode];
+}
+
+- (NSString *)mCode {
+    return [self.user objectForKey:KeyCode];
+}
+
 
 - (void)setIconUrl:(NSString *)iconUrl {
     [self.user setObject:iconUrl forKey:KeyIcon];

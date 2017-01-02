@@ -8,8 +8,19 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 
-@interface BaseDataModel : AVObject
+@protocol BaseDataProtocol <NSObject>
 
-+ (instancetype)classObject:(NSString *)className;
+- (NSString *) className;
+
+@end
+
+@interface BaseDataModel : NSObject <BaseDataProtocol>
+
+@property (nonatomic, strong, readonly) AVObject * avObject;
+
++ (instancetype) newObject;
++ (instancetype) objectWithObject: (AVObject *)object;
+
+- (instancetype) initWithAVObject: (AVObject *)object;
 
 @end

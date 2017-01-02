@@ -15,15 +15,6 @@
 
 @implementation SettingViewController
 
-- (BOOL) needCustomNavigation {
-    return YES;
-}
-
-- (BOOL)needHideBottomBar
-{
-    return NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -43,13 +34,6 @@
     [self.navigationController pushViewController:resumeViewControler animated:YES];
 }
     
-- (IBAction)ButtonDo:(id)sender {
-    
-    ResumeViewController *resumeViewControler;
-    resumeViewControler =[ResumeViewController new];
-    resumeViewControler.title=@"self introduction";
-    [self.navigationController pushViewController:resumeViewControler animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

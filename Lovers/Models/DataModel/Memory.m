@@ -12,21 +12,21 @@ static NSString * KeyRecords = @"records";
 
 @implementation Memory
 
-+ (instancetype) memory {
-    return [self objectWithClassName:MemoryClassName];
+- (NSString *)className {
+    return MemoryClassName;
 }
 
 - (AVRelation *)recordsRelation {
-    return [self relationForKey:KeyRecords];
+    return [self.avObject relationForKey:KeyRecords];
 }
 
 - (void)setRecords:(NSArray<RecordObject *> *)records
 {
     AVRelation * relation = self.recordsRelation;
     for (RecordObject * record in records) {
-        [relation addObject:record];
+        [relation addObject:record.avObject];
     }
-    [self saveInBackground];
+    [self.avObject saveInBackground];
 }
 
 - (void)getRecords:(void (^)(NSArray<RecordObject *> *))callback

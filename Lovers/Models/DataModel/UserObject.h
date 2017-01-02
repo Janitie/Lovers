@@ -19,15 +19,17 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong, readonly) AVUser * user;
 
+/// wxopenid
 @property (nonatomic) NSString * username;
 @property (nonatomic) NSString * password;
 
-//@property (nonatomic) NSString * openId:;
 @property (nonatomic) NSString * iconUrl;
 @property (nonatomic) GenderType genderType;
 @property (nonatomic) NSString * nickname;
+@property (nonatomic) NSString * mCode;
 
 + (instancetype)newUser;
 + (instancetype)currentUser;
++ (instancetype)userWithUser:(AVUser *)user;
 
 @end

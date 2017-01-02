@@ -10,10 +10,9 @@
 
 static NSString * TargetClass = @"Target";
 
-@interface TargetObject : AVObject
+@interface TargetObject : BaseDataModel
 
 @property (nonatomic) NSString * title;
 
-+ (instancetype)Target;
 
 @end

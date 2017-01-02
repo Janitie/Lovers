@@ -8,10 +8,49 @@
 
 #import "BaseDataModel.h"
 
+@interface BaseDataModel ()
+
+@property (nonatomic, strong) AVObject * avObject;
+
+@end
+
 @implementation BaseDataModel
 
-+ (instancetype) classObject:(NSString *)className {
-    return (BaseDataModel *)[AVObject objectWithClassName:className];
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        self.avObject = [AVObject objectWithClassName:[self className]];
+    }
+    return self;
+}
+
+- (instancetype) initWithAVObject:(AVObject *)object
+{
+    self = [super init];
+    if (self) {
+        self.avObject = object;
+    }
+    return self;
+}
+
+- (NSString *)className
+{
+    return @"baseClassName";
+}
+
++ (instancetype)newObject
+{
+    return [[self class] new];
+}
+
++ (instancetype)objectWithObject:(AVObject *)object
+{
+    if (object) {
+        return [[[self class] alloc] initWithAVObject:object];
+    } else {
+        return nil;
+    }
 }
 
 @end
