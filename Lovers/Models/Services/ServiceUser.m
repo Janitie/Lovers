@@ -23,30 +23,77 @@
         
         [newUser.user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             if (!error) {
-                if (callback) {
-                    callback(succeeded);
-                }
+                NSString *mcode = [newUser.user objectId];
+                NSLog(@"%@",mcode);
+                mcode = [mcode substringFromIndex:mcode.length-5];
+                newUser.mCode = mcode;
+                
+                [newUser.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                    if (callback) {
+                        callback(succeeded);
+                    }
+                }];
+                
             }
         }];
+        
     }
 }
 
 + (void)logInWithUsername:(NSString *)username
                  password:(NSString *)password
-                 callback:(void (^)(UserObject *))callback {
+                 callback:(void (^)(UserObject *,NSString *))callback {
     if (username && password) {
         [AVUser logInWithUsernameInBackground:username
                                      password:password
                                         block:^(AVUser * _Nullable user, NSError * _Nullable error) {
                                             if (user) {
                                                 UserObject * logUser = [UserObject currentUser];
-                                                callback(logUser);
+                                                callback(logUser, logUser.mCode);
                                             }
                                             else {
-                                                callback(nil);
+                                                callback(nil, nil);
                                             }
                                         }];
     }
 }
+
++ (void)exit {
+    if ([UserObject currentUser]) {
+        [AVUser logOut];
+    }
+    else {
+        NSLog(@"error logout");
+    }
+}
+
+
++ (void)matchUserWithCode:(NSString *)mCode callback:(void (^)(BOOL, NSError *))callback {
+    AVQuery *query = [AVUser query];
+    [query whereKey:@"matchCode" equalTo:mCode];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (objects && objects.count > 0) {
+            UserObject *user = [UserObject userWithUser:objects[0]];
+            UserObject * me = [UserObject currentUser];
+            
+            MatchObject *match = [MatchObject newObject];
+            match.userOne = user.user;
+            match.userTwo = me.user;
+            
+            [match.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                [AVObject saveAllInBackground:@[user.user, me.user]
+                                        block:^(BOOL succeeded, NSError * _Nullable error) {
+                                            if (callback) {
+                                                callback(succeeded, error);
+                                            }
+                                        }];
+            }];
+        } else {
+            callback(NO, nil);
+            NSLog(@"no object");
+        }
+    }];
+}
+
 
 @end

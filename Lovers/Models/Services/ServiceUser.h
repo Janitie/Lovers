@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UserObject.h"
+#import "MatchObject.h"
 
 #define DEFAULT_PASSWORD @"12345"
 
@@ -17,9 +18,14 @@
 + (void) signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void(^)(BOOL))callback;
 
 //logIn
-+ (void) logInWithUsername:(NSString *)username password:(NSString *)password callback:(void(^)(UserObject *))callback;
++ (void) logInWithUsername:(NSString *)username password:(NSString *)password callback:(void(^)(UserObject *,NSString *))callback;
+
+//logOut
++ (void) exit;
 
 //match
-+ (void)match;
++ (void) matchUserWithCode:(NSString *)mCode callback:(void(^)(BOOL succeed, NSError *error))callback;
+
+//dismatch
 
 @end

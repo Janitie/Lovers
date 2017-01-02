@@ -23,7 +23,42 @@
     
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 
+//    [ServiceUser logInWithUsername:@"user3"
+//                          password:DEFAULT_PASSWORD
+//                          callback:^(UserObject * cUser,NSString * mCode) {
+//                              if (cUser) {
+//                                  NSLog(@"good log");
+//                                  NSLog(@"%@",mCode);
+//                                  
+//                                  [ServiceUser matchUserWithCode:@"660ee"
+//                                                        callback:^(BOOL succeed, NSError *error) {
+//                                                            if (succeed) {
+//                                                                NSLog(@"good match");
+//                                                            }
+//                                                        }];
+//                              }
+//                              else {
+//                                  NSLog(@"bad log");
+//                              }
+//                          }];
     
+//    [ServiceUser signUpWithUsername:@"user3"
+//                           nickname:@"jim"
+//                            iconUrl:@"baidu"
+//                           callback:^(BOOL succeeded) {
+//                               if (succeeded) {
+//                                   NSLog(@"good sign");
+//                               }
+//                           }];
+    
+//    [ServiceUser signUpWithUsername:@"user4"
+//                           nickname:@"mary"
+//                            iconUrl:@"baidu"
+//                           callback:^(BOOL succeeded) {
+//                               if (succeeded) {
+//                                   NSLog(@"good sign2");
+//                               }
+//                           }];
 }
     
 
