@@ -17,6 +17,8 @@
 @interface BaseDataModel : NSObject <BaseDataProtocol>
 
 @property (nonatomic, strong, readonly) AVObject * avObject;
+@property (nonatomic, readonly) NSString * createAt;
+@property (nonatomic, readonly) NSString * updateAt;
 
 + (instancetype) newObject;
 + (instancetype) objectWithObject: (AVObject *)object;

@@ -24,10 +24,11 @@
     return 125.0f;
 }
 
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

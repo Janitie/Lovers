@@ -64,7 +64,6 @@
     [self makeConstraints];
 }
 
-
 - (BOOL)needCustomNavigation
 {
     return  NO;

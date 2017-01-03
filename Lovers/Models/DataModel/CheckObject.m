@@ -52,4 +52,9 @@ static NSString * KeyStatus = @"isComplete";
     }
 }
 
+- (BOOL)isComplete
+{
+    return [[self.avObject objectForKey:KeyStatus] boolValue];
+}
+
 @end

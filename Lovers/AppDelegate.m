@@ -11,6 +11,10 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WXApi.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,10 +30,12 @@
     
     [self changeToLoginView];
     
-    //LeanCloud数据存储
+    // LeanCloud数据存储
     [AVOSCloud setApplicationId:@"oCCxSuTefNMrQdsv9VVxjJuM-gzGzoHsz" clientKey:@"Q4SvggmCsLEerBauTHi2C5Xg"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    // shareSDK
+    [self registerShareSdk];
     
     return YES;
 }
@@ -42,6 +48,31 @@
 - (void)changeToMainView {
     [self.window setRootViewController:[MainViewController new]];
     [self.window makeKeyAndVisible];
+}
+
+- (void)registerShareSdk {
+    [ShareSDK registerApp:@"1a713fe37c468"
+          activePlatforms:@[@(SSDKPlatformTypeWechat)]
+                 onImport:^(SSDKPlatformType platformType) {
+                     switch (platformType) {
+                         case SSDKPlatformTypeWechat:
+                             [ShareSDKConnector connectWeChat:[WXApi class]];
+                             break;
+                         default:
+                             break;
+                     }
+                 }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+              switch (platformType) {
+                  case SSDKPlatformTypeWechat:
+                      [appInfo SSDKSetupWeChatByAppId:@"wx2e71f92d69ea0b30"
+                                            appSecret:@"ea0dc5bd65e62a86819b6872450147e7"];
+                      break;
+                      
+                  default:
+                      break;
+              }
+          }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

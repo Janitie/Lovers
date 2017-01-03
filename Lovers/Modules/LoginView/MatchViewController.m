@@ -7,12 +7,20 @@
 //
 
 #import "MatchViewController.h"
+#import "ServiceUser.h"
+#import "UserObject.h"
 
 @interface MatchViewController ()
 
 @end
 
 @implementation MatchViewController
+
+- (void)viewSetting {
+    [super viewSetting];
+    
+    self.myMCodeTextField.text = [[LocalDataObject Instance] userObject].mCode;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,11 +33,26 @@
 }
 
 - (IBAction)createRelationButtonDo:(id)sender {
-    [(AppDelegate *)[UIApplication sharedApplication].delegate changeToMainView];
+    [MBProgressHUD showHUDinKeyWindow];
+    [ServiceUser matchUserWithCode:self.othersCodeTextField.text
+     callback:^(BOOL succeed, Memory *memory, NSError *error) {
+         [MBProgressHUD showHUDinKeyWindow];
+         if (succeed) {
+             [[LocalDataObject Instance] setCurrentMemory:memory];
+             [(AppDelegate *)[UIApplication sharedApplication].delegate changeToMainView];
+         }
+     }];
 }
 
 - (IBAction)checkoutRelationButtonDo:(id)sender {
-    [(AppDelegate *)[UIApplication sharedApplication].delegate changeToMainView];
+    [MBProgressHUD showHUDinKeyWindow];
+    [ServiceUser isMatchedWithCallback:^(BOOL succeed, Memory *currentMemo) {
+        [MBProgressHUD hideHUDinKeyWindow];
+        if (succeed) {
+            [[LocalDataObject Instance] setCurrentMemory:currentMemo];
+            [(AppDelegate *)[UIApplication sharedApplication].delegate changeToMainView];
+        }
+    }];
 }
 
 #pragma mark - Protocol

@@ -8,6 +8,7 @@
 
 #import "AddCustomTargetViewController.h"
 #import "CheckObject.h"
+#import "ServiceCheck.h"
 
 @interface AddCustomTargetViewController ()
 
@@ -80,7 +81,7 @@
 - (UIDatePicker *)datePicker
 {
     if (!_datePicker) {
-        _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, screenWidth, 480)];
+        _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, screenWidth, 280)];
         _datePicker.datePickerMode = UIDatePickerModeDate;
         [_datePicker addTarget:self action:@selector(dateChange:) forControlEvents:UIControlEventValueChanged];
     }
@@ -91,6 +92,17 @@
     NSDateFormatter * formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM-dd";
     self.planTimeTextField.text = [formatter stringFromDate:self.datePicker.date];
+}
+
+- (IBAction)comfirmButtonDo:(id)sender {
+    [MBProgressHUD showHUDinKeyWindow];
+    [ServiceCheck creatNewWithTitle:self.planTitleTextField.text finishTime:self.datePicker.date callback:^(BOOL succeeded) {
+        [MBProgressHUD hideHUDinKeyWindow];
+        if (succeeded) {
+            [MBProgressHUD showQuickTipWithTitle:@"创建成功" withText:nil];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
 }
 
 @end

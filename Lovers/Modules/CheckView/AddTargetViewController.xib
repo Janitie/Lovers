@@ -13,8 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTargetViewController">
             <connections>
+                <outlet property="customButton" destination="WM3-wg-Qda" id="QJs-dr-8M1"/>
                 <outlet property="targetCard" destination="OHk-lw-eIG" id="75p-wL-lwC"/>
-                <outlet property="targetTitleLabel" destination="OHk-lw-eIG" id="lnv-s4-WtV"/>
+                <outlet property="targetTitleLabel" destination="aFJ-At-e48" id="0vP-eQ-uoR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8RX-au-oRG"/>
             </connections>
         </placeholder>
@@ -35,6 +36,9 @@
                             <state key="normal" title="暂不考虑">
                                 <color key="titleColor" red="0.8659822345" green="0.36681994890000003" blue="0.4716028618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.57113951444625854" green="0.11593794077634811" blue="0.088987879455089569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="refuseButtonDo:" destination="-1" eventType="touchUpInside" id="kkA-c7-h9S"/>
                             </connections>
@@ -48,6 +52,9 @@
                             <state key="normal" title="很好，采纳">
                                 <color key="titleColor" red="0.1085785965382278" green="0.8659822345" blue="0.30371133269301842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.090919189155101776" green="0.5187186598777771" blue="0.098680071532726288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="acceptButtonDo:" destination="-1" eventType="touchUpInside" id="Aj7-7g-uBf"/>
                             </connections>
@@ -60,7 +67,7 @@
                                 <constraint firstAttribute="height" constant="42" id="keT-uS-iDn"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aFJ-At-e48">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载中..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aFJ-At-e48">
                             <rect key="frame" x="8" y="79" width="224" height="105"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,6 +99,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="自己订制一个"/>
+                    <state key="highlighted">
+                        <color key="titleColor" red="0.63929841426490752" green="0.64809132178251949" blue="0.66913864213197971" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="customTargetButtonDo:" destination="-1" eventType="touchUpInside" id="lvT-N4-5Yh"/>
                     </connections>

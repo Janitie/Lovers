@@ -17,6 +17,7 @@
 + (void)creatRecordWithCheck:(CheckObject *)cObject Title:(NSString *)title content:(NSString *)content imgUrl:(NSString *)imgUrl callback:(void(^)(BOOL))callback;
 
 
-+ (void)fetchRecordListCallback:(RecordListBlock)callback;
++ (void)fetchRecordListWithSkip:(NSInteger)skip
+callback:(RecordListBlock)callback;
 
 @end

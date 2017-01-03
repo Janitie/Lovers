@@ -8,7 +8,10 @@
 
 #import "BaseViewController.h"
 
+@class RecordObject;
+
 @interface MemoryDetailViewController : BaseViewController
 
+@property (nonatomic, strong) RecordObject * record;
 
 @end

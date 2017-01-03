@@ -67,6 +67,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <state key="normal" title="确 认"/>
+                    <connections>
+                        <action selector="comfirmButtonDo:" destination="-1" eventType="touchUpInside" id="vJ7-6R-syB"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

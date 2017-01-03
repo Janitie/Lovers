@@ -53,4 +53,18 @@
     }
 }
 
+- (NSString *)createAt
+{
+    NSDateFormatter * formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    return [formatter stringFromDate:self.avObject.createdAt];
+}
+
+- (NSString *)updateAt
+{
+    NSDateFormatter * formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    return [formatter stringFromDate:self.avObject.updatedAt];
+}
+
 @end

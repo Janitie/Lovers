@@ -38,24 +38,32 @@
     
 }
 
-+ (void)fetchRecordListCallback:(RecordListBlock)callback
++ (void)fetchRecordListWithSkip:(NSInteger)skip callback:(RecordListBlock)callback
 {
-//    AVQuery *queryUser = [AVQuery queryWithClassName:@"_User"];
-//    [queryUser whereKey:@"objectId" equalTo:userId];
-//    
-//    AVQuery *query = [AVQuery queryWithClassName:RecordClass];
-//    [query whereKey:@"creator" matchesQuery:queryUser];
-//    
-//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//        callback(objects, error);
-//    }];
-    
-    UserObject * cUser = [UserObject currentUser];
-    if (cUser) {
-        
+    Memory * currenMemory = [[LocalDataObject Instance] currentMemory];
+    if (currenMemory) {
+        [currenMemory.avObject fetchInBackgroundWithBlock:^(AVObject * _Nullable object, NSError * _Nullable error) {
+            if (!error) {
+                AVQuery *query = [currenMemory.recordsRelation query];
+                [query setLimit:10];
+                [query setSkip:skip];
+                [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+                    NSMutableArray * records = [NSMutableArray array];
+                    if (objects && objects.count > 0) {
+                        for (AVObject * obj in objects) {
+                            RecordObject *record = [RecordObject objectWithObject:obj];
+                            [records addObject:record];
+                        }
+                    }
+                    callback(records, error);
+                }];
+            } else {
+                callback (nil, nil);
+            }
+        }];
     }
     else {
-        NSLog(@"no entry");
+        callback(nil, nil);
     }
 }
 

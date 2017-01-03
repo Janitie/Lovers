@@ -57,9 +57,18 @@
 
 + (void)findAllCheckCallback:(void (^)(NSArray<AVObject *> * checkList, NSError * error))callback {
     AVQuery * query = [AVQuery queryWithClassName:CheckClass];
+    [query whereKey:@"user" equalTo:[UserObject currentUser].user];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
-            callback(objects,nil);
+            NSMutableArray * checkList = [NSMutableArray array];
+            if (objects && objects.count > 0)
+            {
+                for (AVObject *obj in objects) {
+                    CheckObject * check = [CheckObject objectWithObject:obj];
+                    [checkList addObject:check];
+                }
+            }
+            callback(checkList,nil);
         }
     }];
 }

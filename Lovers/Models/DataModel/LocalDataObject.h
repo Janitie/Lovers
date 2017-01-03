@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class Memory;
+@class UserObject;
 
 @interface LocalDataObject : NSObject
+
+@property (nonatomic, strong) UserObject * userObject;
+@property (nonatomic, strong) NSString * wxOpenId;
+@property (nonatomic, strong) NSString * wxNickName;
+@property (nonatomic, strong) NSString * wxIconUrl;
+@property (nonatomic, strong) NSNumber * wxGender;
 
 @property (nonatomic, strong) Memory * currentMemory;
 

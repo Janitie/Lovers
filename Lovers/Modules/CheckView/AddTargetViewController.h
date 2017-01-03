@@ -12,6 +12,7 @@
 @interface AddTargetViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIView *targetCard;
-@property (weak, nonatomic) IBOutlet UIView *targetTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *targetTitleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *customButton;
 
 @end

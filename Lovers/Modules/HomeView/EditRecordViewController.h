@@ -8,10 +8,14 @@
 
 #import "BaseViewController.h"
 
+@class CheckObject;
+
 @interface EditRecordViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
+
+- (id)initWithCheckObject:(CheckObject *)checkObject;
 
 @end

@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "ResumeViewController.h"
 #import "MyHeaderTableViewCell.h"
+#import "ServiceUser.h"
 #import "UserObject.h"
 
 @interface SettingViewController ()
@@ -51,6 +52,11 @@
     return NO;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
@@ -77,9 +83,19 @@
         } else if (indexPath.row == 2) {
             [cell.textLabel setText:@"退出登陆"];
         }
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 2) {
+        if ([[UserObject currentUser] user]) {
+            [ServiceUser exit];
+            [(AppDelegate *)[UIApplication sharedApplication].delegate changeToLoginView];
+        }
+    }
+}
 
 @end

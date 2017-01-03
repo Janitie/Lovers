@@ -26,6 +26,15 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ([self autoRefreshHeader]) {
+        [self refreshHeader];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,6 +48,7 @@
         _header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf refreshTableViewWithStartIndex:0 finishCallBack:^{
                 [_header endRefreshing];
+                [weakSelf.tableView reloadData];
             }];
         }];
     }
@@ -52,6 +62,7 @@
         _footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [weakSelf refreshTableViewWithStartIndex:[self.dataSource count] finishCallBack:^{
                 [_footer endRefreshing];
+                [weakSelf.tableView reloadData];
             }];
         }];
     }

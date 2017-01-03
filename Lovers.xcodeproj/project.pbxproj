@@ -68,6 +68,19 @@
 		AD88C4001E1ADF90005FCB0E /* UILabel+StringFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C3FF1E1ADF90005FCB0E /* UILabel+StringFrame.m */; };
 		AD88C4041E1AEC5D005FCB0E /* EditRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD88C4021E1AEC5D005FCB0E /* EditRecordViewController.m */; };
 		AD88C4051E1AEC5D005FCB0E /* EditRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD88C4031E1AEC5D005FCB0E /* EditRecordViewController.xib */; };
+		AD88C41D1E1AF2CF005FCB0E /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C4071E1AF2CF005FCB0E /* ShareSDK.framework */; };
+		AD88C41E1E1AF2CF005FCB0E /* ShareSDKConfigFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD88C40A1E1AF2CF005FCB0E /* ShareSDKConfigFile.bundle */; };
+		AD88C41F1E1AF2CF005FCB0E /* ShareSDKConfigFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C40B1E1AF2CF005FCB0E /* ShareSDKConfigFile.framework */; };
+		AD88C4201E1AF2D0005FCB0E /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C40C1E1AF2CF005FCB0E /* ShareSDKExtension.framework */; };
+		AD88C4211E1AF2D0005FCB0E /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD88C40D1E1AF2CF005FCB0E /* ShareSDKUI.bundle */; };
+		AD88C4221E1AF2D0005FCB0E /* ShareSDKUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C40E1E1AF2CF005FCB0E /* ShareSDKUI.framework */; };
+		AD88C4231E1AF2D0005FCB0E /* WechatConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C4101E1AF2CF005FCB0E /* WechatConnector.framework */; };
+		AD88C4241E1AF2D0005FCB0E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C4131E1AF2CF005FCB0E /* libWeChatSDK.a */; };
+		AD88C4251E1AF2D0005FCB0E /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD88C4141E1AF2CF005FCB0E /* read_me.txt */; };
+		AD88C4261E1AF2D0005FCB0E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD88C4151E1AF2CF005FCB0E /* README.txt */; };
+		AD88C4271E1AF2D0005FCB0E /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C41A1E1AF2CF005FCB0E /* MOBFoundation.framework */; };
+		AD88C4281E1AF2D0005FCB0E /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD88C41B1E1AF2CF005FCB0E /* ShareSDK.bundle */; };
+		AD88C4291E1AF2D0005FCB0E /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD88C41C1E1AF2CF005FCB0E /* ShareSDKConnector.framework */; };
 		CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC920B325A5017925D78351F /* libPods-Lovers.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +188,22 @@
 		AD88C4011E1AEC5D005FCB0E /* EditRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRecordViewController.h; sourceTree = "<group>"; };
 		AD88C4021E1AEC5D005FCB0E /* EditRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRecordViewController.m; sourceTree = "<group>"; };
 		AD88C4031E1AEC5D005FCB0E /* EditRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRecordViewController.xib; sourceTree = "<group>"; };
+		AD88C4071E1AF2CF005FCB0E /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
+		AD88C40A1E1AF2CF005FCB0E /* ShareSDKConfigFile.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKConfigFile.bundle; sourceTree = "<group>"; };
+		AD88C40B1E1AF2CF005FCB0E /* ShareSDKConfigFile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConfigFile.framework; sourceTree = "<group>"; };
+		AD88C40C1E1AF2CF005FCB0E /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
+		AD88C40D1E1AF2CF005FCB0E /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
+		AD88C40E1E1AF2CF005FCB0E /* ShareSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKUI.framework; sourceTree = "<group>"; };
+		AD88C4101E1AF2CF005FCB0E /* WechatConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WechatConnector.framework; sourceTree = "<group>"; };
+		AD88C4131E1AF2CF005FCB0E /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		AD88C4141E1AF2CF005FCB0E /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		AD88C4151E1AF2CF005FCB0E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		AD88C4161E1AF2CF005FCB0E /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		AD88C4171E1AF2CF005FCB0E /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		AD88C4181E1AF2CF005FCB0E /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		AD88C41A1E1AF2CF005FCB0E /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		AD88C41B1E1AF2CF005FCB0E /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
+		AD88C41C1E1AF2CF005FCB0E /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
 		CC920B325A5017925D78351F /* libPods-Lovers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lovers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,15 +212,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBA984C1E1630F000380B7C /* libsqlite3.tbd in Frameworks */,
 				3BBA98541E16312400380B7C /* CoreLocation.framework in Frameworks */,
+				AD88C4291E1AF2D0005FCB0E /* ShareSDKConnector.framework in Frameworks */,
+				AD88C41F1E1AF2CF005FCB0E /* ShareSDKConfigFile.framework in Frameworks */,
 				3BBA98521E16311800380B7C /* CoreTelephony.framework in Frameworks */,
 				3BBA98501E16310900380B7C /* MobileCoreServices.framework in Frameworks */,
 				3BBA984E1E1630FE00380B7C /* SystemConfiguration.framework in Frameworks */,
-				3BBA984C1E1630F000380B7C /* libsqlite3.tbd in Frameworks */,
+				AD88C4201E1AF2D0005FCB0E /* ShareSDKExtension.framework in Frameworks */,
 				3BBA984A1E1630D800380B7C /* libicucore.tbd in Frameworks */,
+				AD88C4271E1AF2D0005FCB0E /* MOBFoundation.framework in Frameworks */,
+				AD88C4231E1AF2D0005FCB0E /* WechatConnector.framework in Frameworks */,
 				3BBA98481E1630C300380B7C /* libc++.tbd in Frameworks */,
+				AD88C4221E1AF2D0005FCB0E /* ShareSDKUI.framework in Frameworks */,
 				3BBA98461E1630B300380B7C /* libz.tbd in Frameworks */,
 				CBBDA0BC0B2D97ADBF23AE2A /* libPods-Lovers.a in Frameworks */,
+				AD88C41D1E1AF2CF005FCB0E /* ShareSDK.framework in Frameworks */,
+				AD88C4241E1AF2D0005FCB0E /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +238,7 @@
 		3BA0EF441E15514200AF8A21 = {
 			isa = PBXGroup;
 			children = (
+				AD88C4061E1AF2CF005FCB0E /* ShareSDK */,
 				3BA0EF4F1E15514200AF8A21 /* Lovers */,
 				3BA0EF4E1E15514200AF8A21 /* Products */,
 				D60CB821457CDEFB04EC76C0 /* Pods */,
@@ -451,6 +489,77 @@
 			path = "UILabel+StringFrame";
 			sourceTree = "<group>";
 		};
+		AD88C4061E1AF2CF005FCB0E /* ShareSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C4071E1AF2CF005FCB0E /* ShareSDK.framework */,
+				AD88C4081E1AF2CF005FCB0E /* Support */,
+			);
+			path = ShareSDK;
+			sourceTree = "<group>";
+		};
+		AD88C4081E1AF2CF005FCB0E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C4091E1AF2CF005FCB0E /* Optional */,
+				AD88C40F1E1AF2CF005FCB0E /* PlatformConnector */,
+				AD88C4111E1AF2CF005FCB0E /* PlatformSDK */,
+				AD88C4191E1AF2CF005FCB0E /* Required */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		AD88C4091E1AF2CF005FCB0E /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C40A1E1AF2CF005FCB0E /* ShareSDKConfigFile.bundle */,
+				AD88C40B1E1AF2CF005FCB0E /* ShareSDKConfigFile.framework */,
+				AD88C40C1E1AF2CF005FCB0E /* ShareSDKExtension.framework */,
+				AD88C40D1E1AF2CF005FCB0E /* ShareSDKUI.bundle */,
+				AD88C40E1E1AF2CF005FCB0E /* ShareSDKUI.framework */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		AD88C40F1E1AF2CF005FCB0E /* PlatformConnector */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C4101E1AF2CF005FCB0E /* WechatConnector.framework */,
+			);
+			path = PlatformConnector;
+			sourceTree = "<group>";
+		};
+		AD88C4111E1AF2CF005FCB0E /* PlatformSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C4121E1AF2CF005FCB0E /* WeChatSDK */,
+			);
+			path = PlatformSDK;
+			sourceTree = "<group>";
+		};
+		AD88C4121E1AF2CF005FCB0E /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C4131E1AF2CF005FCB0E /* libWeChatSDK.a */,
+				AD88C4141E1AF2CF005FCB0E /* read_me.txt */,
+				AD88C4151E1AF2CF005FCB0E /* README.txt */,
+				AD88C4161E1AF2CF005FCB0E /* WechatAuthSDK.h */,
+				AD88C4171E1AF2CF005FCB0E /* WXApi.h */,
+				AD88C4181E1AF2CF005FCB0E /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
+			sourceTree = "<group>";
+		};
+		AD88C4191E1AF2CF005FCB0E /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				AD88C41A1E1AF2CF005FCB0E /* MOBFoundation.framework */,
+				AD88C41B1E1AF2CF005FCB0E /* ShareSDK.bundle */,
+				AD88C41C1E1AF2CF005FCB0E /* ShareSDKConnector.framework */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
 		D60CB821457CDEFB04EC76C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,7 +603,8 @@
 				TargetAttributes = {
 					3BA0EF4C1E15514200AF8A21 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 6QBKQCD8R6;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -521,6 +631,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD88C41E1E1AF2CF005FCB0E /* ShareSDKConfigFile.bundle in Resources */,
 				AD88C3F21E1ACBD3005FCB0E /* MatchViewController.xib in Resources */,
 				AD88C4051E1AEC5D005FCB0E /* EditRecordViewController.xib in Resources */,
 				AD88C3E41E1A947D005FCB0E /* AddCustomTargetViewController.xib in Resources */,
@@ -530,12 +641,16 @@
 				3BBA989A1E18D1D800380B7C /* CheckTableViewController.xib in Resources */,
 				AD88C3BA1E1A9083005FCB0E /* HomeTableViewCell.xib in Resources */,
 				3BBA989E1E18D1D800380B7C /* ResumeViewController.xib in Resources */,
+				AD88C4281E1AF2D0005FCB0E /* ShareSDK.bundle in Resources */,
 				3BA0EF601E15514200AF8A21 /* Assets.xcassets in Resources */,
 				AD88C3C21E1A916A005FCB0E /* TargetTableViewCell.xib in Resources */,
 				3BA0EF5B1E15514200AF8A21 /* Main.storyboard in Resources */,
 				AD88C3ED1E1ACBC2005FCB0E /* LoginViewController.xib in Resources */,
+				AD88C4261E1AF2D0005FCB0E /* README.txt in Resources */,
 				AD88C3D71E1A93FB005FCB0E /* DisMatchViewController.xib in Resources */,
+				AD88C4251E1AF2D0005FCB0E /* read_me.txt in Resources */,
 				3BBA989C1E18D1D800380B7C /* HomeViewController.xib in Resources */,
+				AD88C4211E1AF2D0005FCB0E /* ShareSDKUI.bundle in Resources */,
 				3BBA98A01E18D1D800380B7C /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +871,14 @@
 			baseConfigurationReference = 6ED336D48A682BBCF4B14786 /* Pods-Lovers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6QBKQCD8R6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK",
+					"$(PROJECT_DIR)/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/ShareSDK/Support/Required",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Lovers/Prefix.pch";
 				INFOPLIST_FILE = Lovers/Info.plist;
@@ -763,9 +886,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AVOSCloud",
+					"$(PROJECT_DIR)/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-Janitie.Lovers";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goamob.PhotographMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c1a54d07-e169-4308-bb30-37dd14864fdf";
+				PROVISIONING_PROFILE_SPECIFIER = dev_photoMan;
 			};
 			name = Debug;
 		};
@@ -774,6 +900,15 @@
 			baseConfigurationReference = 00E0C848949350F47226DF36 /* Pods-Lovers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 6QBKQCD8R6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ShareSDK",
+					"$(PROJECT_DIR)/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/ShareSDK/Support/Required",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Lovers/Prefix.pch";
 				INFOPLIST_FILE = Lovers/Info.plist;
@@ -781,9 +916,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/AVOSCloud",
+					"$(PROJECT_DIR)/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-Janitie.Lovers";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goamob.PhotographMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2db5ef0b-d166-465d-ab15-d9515ee97566";
+				PROVISIONING_PROFILE_SPECIFIER = "release:PhotoMan";
 			};
 			name = Release;
 		};

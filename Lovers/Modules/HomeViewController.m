@@ -12,6 +12,7 @@
 #import "HomeViewController.h"
 #import "Memory.h"
 #import "HomeTableViewCell.h"
+#import "MemoryDetailViewController.h"
 
 @interface HomeViewController ()
 
@@ -27,54 +28,8 @@
     self.title = @"纪念";
     
     [self.tableView registerNib:[HomeTableViewCell cellNib] forCellReuseIdentifier:[HomeTableViewCell CellReuseIdentifier]];
-    
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    [ServiceUser logInWithUsername:@"user3"
-                          password:DEFAULT_PASSWORD
-                          callback:^(UserObject * user, NSString * mCode) {
-                              
-                              [ServiceUser isMatchedWithCallback:^(BOOL isSucceed, Memory * memoryObject) {
-                                  if (isSucceed) {
-                                      NSLog(@"get Memory succeed : %@", memoryObject.avObject.objectId);
-                                      
-                                      [ServiceRecord creatRecordWithTitle:@"catch"
-                                                                  content:@"takes a lot to find cat"
-                                                                   imgUrl:@"baidu"
-                                                                 callback:^(BOOL succeeded) {
-                                                                     if (succeeded) {
-                                                                         NSLog(@"new record");
-                                                                     }
-                                                                 }];
-                                  }
-                              }];
-
-                              
-                              
-                              
-//                              [ServiceUser matchUserWithCode:@"660ee"
-//                                                    callback:^(BOOL succeed, NSError *error) {
-//                                                        if (succeed) {
-//                                                            NSLog(@"matched");
-//                                                        }
-//                                                    }];
-//                              
-                          }];
-    
-//    [ServiceCheck findCheckWithStatus:YES
-//                             callback:^(NSArray<AVObject *> *checkList, NSError *error) {
-//                                 if (checkList) {
-//                                     for (AVObject * check in checkList) {
-//                                         CheckObject * checkie = [CheckObject objectWithObject:check];
-//                                         NSLog(@"%@",checkie.title);
-//                                     }
-//                                 }
-//                             }];
-    
-    
 }
-    
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -97,11 +52,43 @@
     return YES;
 }
 
+- (void)refreshTableViewWithStartIndex:(NSInteger)startIndex finishCallBack:(void (^)())callback
+{
+    WS(weakSelf);
+    [ServiceRecord fetchRecordListWithSkip:startIndex callback:^(NSArray<RecordObject *> *objects, NSError *error) {
+        if (!error) {
+            if (startIndex == 0) {
+                weakSelf.dataSource = objects;
+            } else {
+                NSMutableArray * newArray = [NSMutableArray arrayWithArray:weakSelf.dataSource];
+                [newArray addObjectsFromArray:objects];
+                weakSelf.dataSource = newArray;
+            }
+        }
+        callback();
+    }];
+}
+
 #pragma mark - TableView Delegate & DataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:[HomeTableViewCell CellReuseIdentifier] forIndexPath:indexPath];
+    RecordObject *record = self.dataSource[indexPath.row];
+    
+    [cell.posterImg sd_setImageWithURL:[NSURL URLWithString:record.imgUrl]];
+    [cell.recordTitle setText:record.title];
+    [cell.achieveTime setText:record.createAt];
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    RecordObject *record = self.dataSource[indexPath.row];
+    MemoryDetailViewController * detailVC = [MemoryDetailViewController new];
+    detailVC.record = record;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

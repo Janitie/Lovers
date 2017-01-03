@@ -11,15 +11,14 @@
 
 @implementation ServiceUser
 
-
-+ (void)signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl callback:(void (^)(BOOL))callback
++ (void)signUpWithUsername:(NSString *)username nickname:(NSString *)nickname iconUrl:(NSString *)iconUrl gender:(NSNumber *)gender callback:(void (^)(BOOL))callback
 {
     if (username && nickname && iconUrl) {
         UserObject * newUser = [UserObject newUser];
         newUser.username = username;
         newUser.password = DEFAULT_PASSWORD;
         newUser.iconUrl = iconUrl;
-        newUser.genderType = Male;
+        newUser.genderType = [gender integerValue]==1?Male:Female;
         
         [newUser.user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             if (!error) {
@@ -41,11 +40,10 @@
 }
 
 + (void)logInWithUsername:(NSString *)username
-                 password:(NSString *)password
                  callback:(void (^)(UserObject *,NSString *))callback {
-    if (username && password) {
+    if (username) {
         [AVUser logInWithUsernameInBackground:username
-                                     password:password
+                                     password:DEFAULT_PASSWORD
                                         block:^(AVUser * _Nullable user, NSError * _Nullable error) {
                                             if (user) {
                                                 UserObject * logUser = [UserObject currentUser];
@@ -68,7 +66,7 @@
 }
 
 
-+ (void)matchUserWithCode:(NSString *)mCode callback:(void (^)(BOOL, NSError *))callback {
++ (void)matchUserWithCode:(NSString *)mCode callback:(void (^)(BOOL, Memory*, NSError *))callback {
     AVQuery *query = [AVUser query];
     [query whereKey:@"matchCode" equalTo:mCode];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -86,17 +84,17 @@
                     
                     [match.avObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                         if (callback) {
-                            callback(succeeded, error);
+                            callback(succeeded, memo, error);
                         }
                     }];
                 } else {
-                    callback(NO, nil);
+                    callback(NO, nil, nil);
                 }
             }];
             
             
         } else {
-            callback(NO, nil);
+            callback(NO, nil, nil);
             NSLog(@"no object");
         }
     }];
@@ -130,6 +128,8 @@
             } else {
                 callback(NO,nil);
             }
+        } else {
+            callback (NO, nil);
         }
     }];
 }

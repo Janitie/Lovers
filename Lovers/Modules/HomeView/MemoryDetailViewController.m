@@ -7,6 +7,7 @@
 //
 
 #import "MemoryDetailViewController.h"
+#import "RecordObject.h"
 
 @interface MemoryDetailViewController ()
 
@@ -61,7 +62,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"RECORD";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.title = self.record.title;
+    self.textView.text = self.record.content;
+    [self.posterImageView sd_setImageWithURL:[NSURL URLWithString:self.record.imgUrl]];
+    
+    CGSize retSize = [self.record.content boundingRectWithSize:CGSizeMake(screenWidth, MAXFLOAT)
+                                                       options:\
+                      NSStringDrawingTruncatesLastVisibleLine |
+                      NSStringDrawingUsesLineFragmentOrigin |
+                      NSStringDrawingUsesFontLeading
+                                                    attributes:@{NSFontAttributeName: self.textView.font}
+                                                       context:nil].size;
+    
+    [self.textView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(self.innerView);
+        make.width.mas_equalTo(screenWidth);
+        make.height.mas_equalTo(retSize.height);
+    }];
+    
+    [self.innerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.textView.mas_right);
+        make.bottom.mas_equalTo(self.posterImageView.mas_bottom);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,6 +123,7 @@
         _textView = [UILabel new];
         _textView.backgroundColor = [UIColor clearColor];
         _textView.textColor = [UIColor blackColor];
+        _textView.numberOfLines = 0;
     }
     return _textView;
 }

@@ -9,6 +9,8 @@
 #import "CheckTableViewController.h"
 #import "TargetTableViewCell.h"
 #import "AddTargetViewController.h"
+#import "ServiceCheck.h"
+#import "EditRecordViewController.h"
 
 @interface CheckTableViewController ()
 
@@ -94,6 +96,16 @@
     return NO;
 }
 
+- (void)refreshTableViewWithStartIndex:(NSInteger)startIndex finishCallBack:(void (^)())callback
+{
+    [ServiceCheck findAllCheckCallback:^(NSArray<AVObject *> *checkList, NSError *error) {
+        if (!error) {
+            self.dataSource = checkList;
+        }
+        callback();
+    }];
+}
+
 #pragma mark - TableView Delegate & DataSource
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -103,9 +115,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TargetTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:[TargetTableViewCell CellReuseIdentifier] forIndexPath:indexPath];
+    CheckObject *check = self.dataSource[indexPath.row];
+    cell.isComplete = check.isComplete;
+    cell.checkTitle.text = check.title;
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    cell.planTime.text = [formatter stringFromDate:check.finishTime];
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CheckObject *check = self.dataSource[indexPath.row];
+    EditRecordViewController *editRecordVC = [[EditRecordViewController alloc] initWithCheckObject:check];
+    [self.navigationController pushViewController:editRecordVC animated:YES];
+    
+}
 
 @end
