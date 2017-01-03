@@ -10,6 +10,7 @@
 #import "Appearance.h"
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import "ServiceUser.h"
 
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
@@ -28,6 +29,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+//    if ([[LocalDataObject Instance] wxOpenId]) {
+//        [ServiceUser logInWithUsername:[LocalDataObject Instance]
+//                              callback:^(UserObject *user, NSString *mCode) {
+//                                  <#code#>
+//                              }];
+//    }
     [self changeToLoginView];
     
     // LeanCloud数据存储

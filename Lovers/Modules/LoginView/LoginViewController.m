@@ -31,6 +31,11 @@
 - (IBAction)weChatLogin:(id)sender {
     [MBProgressHUD showHUDinKeyWindow];
     
+    if ([[LocalDataObject Instance] wxOpenId]) {
+        [self LoginWithLocalOpenId];
+        return;
+    }
+    
     // 微信登陆
     [SSEThirdPartyLoginHelper loginByPlatform:SSDKPlatformTypeWechat
                                    onUserSync:^(SSDKUser *user, SSEUserAssociateHandler associateHandler) {
@@ -163,6 +168,26 @@
 //               }
 //           }];
 }
+
+- (void)LoginWithLocalOpenId
+{
+    [ServiceUser logInWithUsername:[[LocalDataObject Instance] wxOpenId] callback:^(UserObject *user, NSString *mCode) {
+        // 检测是否已配对
+        [ServiceUser isMatchedWithCallback:^(BOOL succeed, Memory *currentMemo) {
+            [MBProgressHUD hideHUDinKeyWindow];
+            if (succeed) {
+                // 已配对，进入主页面
+                [[LocalDataObject Instance] setCurrentMemory:currentMemo];
+                [(AppDelegate *)[UIApplication sharedApplication].delegate changeToMainView];
+            } else {
+                // 未配对，进入配对页面
+                MatchViewController *match = [MatchViewController new];
+                [self.navigationController pushViewController:match animated:YES];
+            }
+        }];
+    }];
+}
+
 
 #pragma mark - Protocol
 
